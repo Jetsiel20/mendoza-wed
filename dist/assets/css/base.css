@@ -1,2 +1,424 @@
-:root{color-scheme:dark;--bg:#101216;--surface:#191c22;--text:#f1f3f6;--muted:#b2bac8;--blue:#376dff;--line:#353b46;--width:1160px;--space:clamp(4rem,8vw,7rem)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:2rem}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit;text-underline-offset:.25em}button{font:inherit}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.12}h1{font-size:clamp(2.65rem,5.5vw,4.7rem);letter-spacing:-.055em}h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.045em}h3{font-size:1.5rem;letter-spacing:-.025em}p{margin-bottom:1.25rem}.container{width:min(var(--width),calc(100% - 2.5rem));margin-inline:auto}.section{padding-block:var(--space);scroll-margin-top:1rem}.eyebrow{font-size:.72rem;letter-spacing:.16em;font-weight:700;color:#a4baff;margin-bottom:1.5rem}.lead{font-size:1.125rem;color:var(--muted);max-width:42ch}a:focus-visible,button:focus-visible{outline:3px solid #b1c5ff;outline-offset:6px}.pending{font-size:.85rem;color:#c9d2e3;border-left:2px solid var(--blue);padding-left:1rem}::selection{background:var(--blue);color:white}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ==========================================
+   MENDOZA — SEGURANÇA E TECNOLOGIA
+   BASE CSS | DESIGN SYSTEM
+   Versão: 2.0
+
+   Identidade visual, tipografia,
+   espaçamento, acessibilidade e
+   estrutura responsiva.
+========================================== */
+
+
+/* ==========================================
+   01. VARIÁVEIS GLOBAIS
+========================================== */
+
+:root {
+
+  color-scheme: dark;
+
+  /* Cores principais */
+  --bg: #101216;
+  --surface: #191C22;
+  --surface-alt: #0A162B;
+
+  --text: #F1F5F9;
+  --muted: #B8C5D5;
+  --line: #353B46;
+
+  /* Identidade MENDOZA */
+  --blue: #087FE7;
+  --blue-hover: #0969BD;
+  --blue-light: #80C9FF;
+  --blue-deep: #0A162B;
+
+  /* Tipografia */
+  --font-main:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  /* Dimensões */
+  --width: 1160px;
+
+  --space: clamp(
+    4rem,
+    8vw,
+    7rem
+  );
+
+  /* Bordas */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* Sombras */
+  --shadow-soft:
+    0 12px 32px rgba(0, 0, 0, 0.18);
+
+  --shadow-blue:
+    0 12px 35px rgba(8, 127, 231, 0.16);
+
+  /* Transições */
+  --transition-fast: 180ms ease;
+  --transition-normal: 320ms ease;
+
+}
+
+
+/* ==========================================
+   02. RESET ESTRUTURAL
+========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* ==========================================
+   03. TIPOGRAFIA
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(
+    2.4rem,
+    5.5vw,
+    4.7rem
+  );
+
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: clamp(
+    2rem,
+    4vw,
+    3.2rem
+  );
+
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: clamp(
+    1.35rem,
+    2.5vw,
+    1.65rem
+  );
+
+  letter-spacing: -0.025em;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   04. LINKS E INTERAÇÃO
+========================================== */
+
+a {
+  color: inherit;
+  text-underline-offset: 0.25em;
+
+  transition:
+    color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--blue-light);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--blue-light);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   05. CONTAINERS
+========================================== */
+
+.container {
+  width: min(
+    var(--width),
+    calc(100% - 2.5rem)
+  );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space);
+  scroll-margin-top: 2rem;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 2.75rem;
+}
+
+
+/* ==========================================
+   06. ELEMENTOS DE TEXTO
+========================================== */
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--blue-light);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 44ch;
+
+  color: var(--muted);
+
+  font-size: clamp(
+    1rem,
+    1.5vw,
+    1.2rem
+  );
+
+  line-height: 1.75;
+}
+
+.pending {
+  padding-left: 1rem;
+
+  border-left: 2px solid var(--blue);
+
+  color: var(--muted);
+
+  font-size: 0.875rem;
+}
+
+
+/* ==========================================
+   07. SELEÇÃO DE TEXTO
+========================================== */
+
+::selection {
+  background: var(--blue);
+  color: #FFFFFF;
+}
+
+
+/* ==========================================
+   08. RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 767px) {
+
+  :root {
+    --space: clamp(
+      3.5rem,
+      9vw,
+      5rem
+    );
+  }
+
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    letter-spacing: -0.03em;
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .lead {
+    line-height: 1.7;
+  }
+
+}
+
+
+/* ==========================================
+   09. TELAS MUITO PEQUENAS
+========================================== */
+
+@media (max-width: 359px) {
+
+  .container {
+    width: calc(100% - 1.5rem);
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+}
+
+
+/* ==========================================
+   10. ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  a {
+    transition: none;
+  }
+
+}
+
+
+/* ==========================================
+   11. LAYOUT DE IMPRESSÃO
+========================================== */
+
+@media print {
+
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #111111;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #111111;
+  }
+
+  a {
+    color: #111111;
+  }
+
+}

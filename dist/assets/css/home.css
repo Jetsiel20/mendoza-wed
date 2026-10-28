@@ -1,21 +1,1284 @@
-.hero{padding-top:clamp(3rem,7vw,6rem)}.hero-grid{display:grid;gap:3rem;align-items:center}.hero h1 span{color:#a9b0bc}.hero-note{font-size:.75rem;color:var(--muted);margin:1.5rem 0 0}.process-list{list-style:none;padding:0;margin:0;display:grid;gap:2rem}.process-list li{border-top:1px solid var(--line);padding-top:1rem}.step-number{display:block;color:#9bb5ff;font-size:.75rem;margin-bottom:1.75rem}.process-list p{color:var(--muted);font-size:.95rem}.trust{background:#1b2029;border-block:1px solid var(--line)}.trust-grid,.contact-grid{display:grid;gap:2rem}.principles{padding-left:1.2rem;color:var(--muted);margin-bottom:2rem}.principles li{padding-bottom:.7rem}.contact-panel{border:1px solid var(--line);padding:clamp(1.5rem,4vw,2.5rem);background:var(--surface)}.status{display:block;color:#aec3ff;font-size:.65rem;letter-spacing:.13em;margin-bottom:1.5rem}.contact-panel>p{color:var(--muted)}dl{font-size:.85rem}dl div{border-top:1px solid var(--line);padding-block:.75rem}dt{font-weight:700}dd{margin:0;color:var(--muted)}.contact-note{font-size:.75rem;margin-bottom:0}@media(min-width:600px){.process-list{grid-template-columns:1fr 1fr}}@media(min-width:900px){.process-list{grid-template-columns:repeat(4,1fr)}.trust-grid,.contact-grid{grid-template-columns:1fr 1fr;gap:5rem}}
 
-/* Services: scoped palette and progressive enhancement. */
-.solutions{--service-blue:#087fe7;--service-deep:#0a162b;background:var(--service-deep);border-block:1px solid #ffffff14;color:#fff}
-.solutions-heading{max-width:900px;margin-bottom:clamp(2rem,5vw,3.5rem)}
-.solutions .eyebrow{color:#78bfff}.solutions-heading h2{font-size:clamp(2rem,4vw,3.2rem);text-wrap:balance}.solutions-heading>p:last-child{color:#becbdc;max-width:70ch}
-.service-grid{display:grid;gap:clamp(1.25rem,3vw,2rem);align-items:start}
-.service-card{min-width:0;position:relative;isolation:isolate;padding:clamp(1.5rem,3vw,2.75rem);border:1px solid #42658b80;border-radius:20px;background:radial-gradient(ellipse at top right,#087fe722,transparent 65%),linear-gradient(145deg,#122841,#0b192e);box-shadow:0 16px 40px #00000026;transition:transform 320ms ease,border-color 320ms ease,box-shadow 320ms ease}
-.service-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:2rem}.service-icon{display:grid;place-items:center;flex:0 0 72px;height:72px;color:#80c9ff;background:#087fe718;border:1px solid #087fe755;border-radius:18px;transition:transform 320ms ease,background 320ms ease}.service-icon svg{width:48px;height:48px}.service-number{font-size:.65rem;letter-spacing:.1em;color:#acbed3;text-align:right}
-.service-card h3{font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.035em;overflow-wrap:break-word}.service-card h3 span{display:block;color:#89c9ff}.service-description{color:#c4d0df;margin-bottom:1.5rem}.service-tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0 0 2rem}.service-tags li{font-size:.75rem;color:#d4deea;padding:.35rem .7rem;border:1px solid #6988ad4d;border-radius:999px;background:#ffffff05}
-.service-details{border-top:1px solid #6988ad4d;padding-top:.75rem}.service-details summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:48px;padding:.5rem 0;color:#fff;font-weight:700;cursor:pointer;list-style:none;border-radius:4px}.service-details summary::-webkit-details-marker{display:none}.service-details summary:focus-visible{outline:3px solid #80c9ff;outline-offset:5px}.service-arrow{font-size:1.5rem;color:#80c9ff;transition:transform 300ms ease}.service-details[open] .service-arrow{transform:rotate(90deg)}.service-detail-body{padding-top:1rem;color:#c4d0df;font-size:.95rem}.service-detail-body p:last-child{margin-bottom:0}
-.service-card:focus-within{border-color:#49abff;box-shadow:0 0 0 1px #087fe7,0 16px 40px #00000026,0 0 30px #087fe71f}.service-card:focus-within .service-icon{background:#087fe72b}
-@media(hover:hover) and (pointer:fine){.service-card:hover{transform:translateY(-6px);border-color:#49abff;box-shadow:0 22px 45px #00000038,0 0 30px #087fe71f}.service-card:hover .service-icon{transform:translateY(-3px) rotate(-3deg);background:#087fe72b}.service-details summary:hover .service-arrow{transform:translateX(4px)}.service-details[open] summary:hover .service-arrow{transform:rotate(90deg)}}
-@media(min-width:760px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service-card{display:flex;flex-direction:column;min-height:100%}.service-details{margin-top:auto}}
-@media(prefers-reduced-motion:no-preference){.service-card.service-reveal-pending{opacity:0;transform:translateY(20px)}.service-card.service-reveal-ready{animation:service-appear 400ms ease both}@keyframes service-appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}}
-@media(prefers-reduced-motion:reduce){.solutions *{animation:none!important;transition:none!important}.service-card:hover,.service-card .service-icon,.service-card .service-arrow{transform:none}}
+/* ==================================================
+   MENDOZA — SEGURANÇA E TECNOLOGIA
+   HOME CSS | VERSÃO 2.0
 
-/* Full-width hero artwork; original PNG retained for visual review. */
-.hero{position:relative;isolation:isolate;min-height:clamp(580px,48vw,780px);display:flex;align-items:center;padding-block:clamp(4rem,7vw,7rem);background-color:#04101e;background-image:linear-gradient(90deg,rgba(3,12,24,.97) 0%,rgba(3,12,24,.85) 32%,rgba(3,12,24,.36) 62%,rgba(3,12,24,.08) 100%),url("../img/Vigil%C3%A2ncia%20Futurista%20e%20Conectividade%20Global.png");background-size:cover;background-position:center right;border-bottom:1px solid #087fe733}
-.hero-grid{display:block}.hero-copy{max-width:650px}.hero h1{font-size:clamp(2.65rem,4.8vw,4.25rem);text-wrap:balance}.hero h1 span{color:#bddcff}.hero .lead{color:#d0dbea;max-width:43ch}.hero .eyebrow{color:#87c7ff}.hero .hero-note{color:#bdcbdc}.hero .button{background:#087fe7;min-height:48px}.hero .button:hover{background:#0969bd}
-@media(max-width:759px){.hero{min-height:620px;background-position:65% center;background-image:linear-gradient(90deg,rgba(3,12,24,.94),rgba(3,12,24,.72)),url("../img/Vigil%C3%A2ncia%20Futurista%20e%20Conectividade%20Global.png")}.hero-copy{max-width:560px}.hero h1{font-size:clamp(2.3rem,8vw,3.5rem)}}
+   Hero cinematográfico
+   Serviços tecnológicos
+   Processo de atendimento
+   Sobre nós
+   Compromissos
+   Contato
+
+   CSS responsivo, sem dependências externas.
+================================================== */
+
+
+/* ==================================================
+   01. HERO CINEMATOGRÁFICO
+================================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  min-height: clamp(610px, 76svh, 790px);
+
+  padding-block: clamp(5rem, 8vw, 8rem);
+
+  overflow: hidden;
+
+  background-color: #04101E;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 12, 24, 0.98) 0%,
+      rgba(3, 12, 24, 0.94) 24%,
+      rgba(3, 12, 24, 0.77) 46%,
+      rgba(3, 12, 24, 0.32) 75%,
+      rgba(3, 12, 24, 0.12) 100%
+    ),
+    url("../img/Sala\ de\ Operações\ de\ TI\ em\ Azul\ Profundo.png");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  border-bottom: 1px solid rgba(8, 127, 231, 0.28);
+}
+
+/* Degradê inferior para transição suave */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: auto 0 0;
+
+  height: 28%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(4, 16, 30, 0.55)
+  );
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Conteúdo acima dos degradês */
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.hero .eyebrow {
+  color: #87C7FF;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  max-width: 19ch;
+
+  margin-bottom: 1.75rem;
+
+  color: #FFFFFF;
+
+  font-size: clamp(
+    2.4rem,
+    4.5vw,
+    4.15rem
+  );
+
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #BBDFFF;
+}
+
+.hero .lead {
+  max-width: 48ch;
+
+  margin-bottom: 2rem;
+
+  color: #D5E1EF;
+
+  font-size: clamp(
+    1rem,
+    1.5vw,
+    1.15rem
+  );
+
+  line-height: 1.8;
+}
+
+.hero .button {
+  min-height: 52px;
+
+  background: var(--blue);
+  color: #FFFFFF;
+}
+
+.hero .button:hover {
+  background: var(--blue-hover);
+}
+
+.hero-note,
+.hero .hero-note {
+  margin: 1.75rem 0 0;
+
+  max-width: 54ch;
+
+  color: #B9CDE0;
+
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+
+/* ==================================================
+   02. SEÇÃO DE SOLUÇÕES
+================================================== */
+
+.solutions {
+  --service-deep: #0A162B;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 0%,
+      rgba(8, 127, 231, 0.095),
+      transparent 48%
+    ),
+    var(--service-deep);
+
+  color: #FFFFFF;
+
+  border-bottom: 1px solid rgba(
+    128, 201, 255, 0.12
+  );
+}
+
+.solutions-heading {
+  max-width: 900px;
+
+  margin-bottom: clamp(
+    2.5rem,
+    5vw,
+    4rem
+  );
+}
+
+.solutions .eyebrow {
+  color: #80C9FF;
+}
+
+.solutions-heading h2 {
+  max-width: 24ch;
+
+  font-size: clamp(
+    2rem,
+    4vw,
+    3.3rem
+  );
+
+  line-height: 1.16;
+
+  text-wrap: balance;
+}
+
+.solutions-heading > p:last-child {
+  max-width: 68ch;
+
+  color: #C0CDDE;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   03. GRID DE SERVIÇOS
+================================================== */
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: clamp(
+    1.25rem,
+    3vw,
+    2rem
+  );
+
+  align-items: stretch;
+}
+
+
+/* ==================================================
+   04. CARTÕES DE SERVIÇOS
+================================================== */
+
+.service-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 100%;
+
+  padding: clamp(
+    1.5rem,
+    3vw,
+    2.75rem
+  );
+
+  overflow: visible;
+
+  border: 1px solid rgba(
+    101, 153, 207, 0.35
+  );
+
+  border-radius: var(--radius-lg);
+
+  background:
+    radial-gradient(
+      ellipse at top right,
+      rgba(8, 127, 231, 0.16),
+      transparent 62%
+    ),
+    linear-gradient(
+      145deg,
+      #132A44,
+      #0B192E
+    );
+
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+/* Linha decorativa tecnológica */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(128, 201, 255, 0.55),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 2.25rem;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 72px;
+
+  width: 72px;
+  height: 72px;
+
+  color: #80C9FF;
+
+  background: rgba(
+    8, 127, 231, 0.12
+  );
+
+  border: 1px solid rgba(
+    8, 127, 231, 0.34
+  );
+
+  border-radius: 18px;
+
+  transition:
+    transform var(--transition-normal),
+    background var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.service-icon svg {
+  width: 46px;
+  height: 46px;
+}
+
+.service-number {
+  color: #AFC5DE;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+
+.service-card h3 {
+  margin-bottom: 1.4rem;
+
+  color: #FFFFFF;
+
+  font-size: clamp(
+    1.65rem,
+    3vw,
+    2.25rem
+  );
+
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+
+  overflow-wrap: break-word;
+}
+
+.service-card h3 span {
+  display: block;
+
+  color: #89C9FF;
+}
+
+.service-description {
+  margin-bottom: 1.75rem;
+
+  color: #C9D7E7;
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   05. ETIQUETAS DOS SERVIÇOS
+================================================== */
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.55rem;
+
+  padding: 0;
+  margin: 0 0 2rem;
+
+  list-style: none;
+}
+
+.service-tags li {
+  padding: 0.45rem 0.75rem;
+
+  color: #D9E7F6;
+
+  font-size: 0.75rem;
+  line-height: 1.45;
+
+  border: 1px solid rgba(
+    105, 151, 205, 0.32
+  );
+
+  border-radius: 999px;
+
+  background: rgba(
+    255, 255, 255, 0.035
+  );
+}
+
+
+/* ==================================================
+   06. DETALHES EXPANSÍVEIS
+================================================== */
+
+.service-details {
+  margin-top: auto;
+
+  padding-top: 0.85rem;
+
+  border-top: 1px solid rgba(
+    128, 201, 255, 0.22
+  );
+}
+
+.service-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  min-height: 48px;
+  padding: 0.5rem 0;
+
+  color: #FFFFFF;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  cursor: pointer;
+  list-style: none;
+
+  border-radius: 4px;
+}
+
+.service-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-details summary::marker {
+  content: "";
+}
+
+.service-details summary:focus-visible {
+  outline: 3px solid var(--blue-light);
+  outline-offset: 4px;
+}
+
+.service-arrow {
+  display: inline-block;
+  flex-shrink: 0;
+
+  color: #80C9FF;
+
+  font-size: 1.5rem;
+  line-height: 1;
+
+  transition:
+    transform var(--transition-normal);
+}
+
+.service-details[open] .service-arrow {
+  transform: rotate(90deg);
+}
+
+.service-detail-body {
+  padding-top: 1rem;
+
+  color: #C9D7E7;
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.service-detail-body p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   07. INTERAÇÕES DOS CARTÕES
+================================================== */
+
+.service-card:focus-within {
+  border-color: #49ABFF;
+
+  box-shadow:
+    0 0 0 1px rgba(8, 127, 231, 0.6),
+    0 16px 38px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:focus-within .service-icon {
+  background: rgba(
+    8, 127, 231, 0.22
+  );
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .service-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #49ABFF;
+
+    box-shadow:
+      0 22px 42px rgba(0, 0, 0, 0.25),
+      0 0 24px rgba(8, 127, 231, 0.08);
+  }
+
+  .service-card:hover .service-icon {
+    transform: translateY(-3px);
+
+    background: rgba(
+      8, 127, 231, 0.22
+    );
+
+    border-color: rgba(
+      128, 201, 255, 0.5
+    );
+  }
+
+  .service-details summary:hover .service-arrow {
+    transform: translateX(4px);
+  }
+
+  .service-details[open] summary:hover .service-arrow {
+    transform: rotate(90deg);
+  }
+
+}
+
+
+/* ==================================================
+   08. PROCESSO DE ATENDIMENTO
+================================================== */
+
+#processo {
+  background: #101216;
+}
+
+#processo .section-heading {
+  max-width: 760px;
+}
+
+.process-list {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: 1.25rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.process-list li {
+  position: relative;
+
+  min-width: 0;
+
+  padding: clamp(
+    1.5rem,
+    3vw,
+    2rem
+  );
+
+  background:
+    linear-gradient(
+      150deg,
+      #1A2331,
+      #151B24
+    );
+
+  border: 1px solid rgba(
+    128, 201, 255, 0.14
+  );
+
+  border-radius: var(--radius-md);
+}
+
+.process-list li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 1.5rem;
+
+  width: 52px;
+  height: 2px;
+
+  background: var(--blue);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 1.75rem;
+
+  color: #A6D9FF;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  background: rgba(
+    8, 127, 231, 0.11
+  );
+
+  border: 1px solid rgba(
+    8, 127, 231, 0.3
+  );
+
+  border-radius: 12px;
+}
+
+.process-list h3 {
+  margin-bottom: 1rem;
+
+  color: #FFFFFF;
+
+  font-size: 1.45rem;
+}
+
+.process-list p {
+  margin-bottom: 0;
+
+  color: var(--muted);
+
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+
+/* ==================================================
+   09. SOBRE NÓS
+================================================== */
+
+#sobre {
+  background:
+    linear-gradient(
+      135deg,
+      #111C2B 0%,
+      #0C1522 100%
+    );
+
+  border-block: 1px solid rgba(
+    128, 201, 255, 0.1
+  );
+}
+
+.trust-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: 2.5rem;
+
+  align-items: start;
+}
+
+.trust-grid > div {
+  min-width: 0;
+}
+
+#sobre h2 {
+  max-width: 16ch;
+
+  text-wrap: balance;
+}
+
+#sobre .lead {
+  max-width: 55ch;
+  margin-bottom: 1.5rem;
+
+  color: #E0ECF8;
+}
+
+#sobre p:not(.eyebrow):not(.lead) {
+  max-width: 62ch;
+
+  color: #BFCFE0;
+
+  line-height: 1.85;
+}
+
+#sobre p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   10. COMPROMISSOS / CONFIANÇA
+================================================== */
+
+.trust {
+  background:
+    radial-gradient(
+      ellipse at 90% 15%,
+      rgba(8, 127, 231, 0.08),
+      transparent 55%
+    ),
+    #0D1726;
+
+  border-block: 1px solid rgba(
+    128, 201, 255, 0.12
+  );
+}
+
+.trust h2 {
+  max-width: 17ch;
+
+  text-wrap: balance;
+}
+
+.trust .lead {
+  max-width: 55ch;
+
+  color: #D1DEEC;
+}
+
+.principles {
+  display: grid;
+  gap: 0.8rem;
+
+  margin: 2rem 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.principles li {
+  position: relative;
+
+  padding: 0.9rem 0.5rem 0.9rem 2rem;
+
+  color: #C3D1E2;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  border-bottom: 1px solid rgba(
+    128, 201, 255, 0.12
+  );
+}
+
+.principles li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0.2rem;
+  top: 1.45rem;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--blue-light);
+
+  box-shadow:
+    0 0 0 4px rgba(8, 127, 231, 0.1);
+}
+
+
+/* ==================================================
+   11. CONTATO
+================================================== */
+
+.contact {
+  background:
+    linear-gradient(
+      135deg,
+      #101216 0%,
+      #111C2C 100%
+    );
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: 2.5rem;
+
+  align-items: start;
+}
+
+.contact h2 {
+  max-width: 17ch;
+
+  text-wrap: balance;
+}
+
+.contact .lead {
+  max-width: 52ch;
+
+  color: #C5D2E2;
+}
+
+
+/* ==================================================
+   12. PAINEL DE CONTATO
+================================================== */
+
+.contact-panel {
+  position: relative;
+
+  min-width: 0;
+
+  padding: clamp(
+    1.5rem,
+    4vw,
+    2.75rem
+  );
+
+  background:
+    radial-gradient(
+      ellipse at top right,
+      rgba(8, 127, 231, 0.13),
+      transparent 65%
+    ),
+    #182336;
+
+  border: 1px solid rgba(
+    128, 201, 255, 0.24
+  );
+
+  border-radius: var(--radius-lg);
+
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+.contact-panel .status {
+  display: inline-block;
+
+  margin-bottom: 1.6rem;
+  padding: 0.5rem 0.85rem;
+
+  color: #A6DCFF;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  line-height: 1.5;
+
+  background: rgba(
+    8, 127, 231, 0.11
+  );
+
+  border: 1px solid rgba(
+    8, 127, 231, 0.25
+  );
+
+  border-radius: 999px;
+}
+
+.contact-panel h3 {
+  margin-bottom: 1.25rem;
+
+  color: #FFFFFF;
+
+  font-size: clamp(
+    1.35rem,
+    2.4vw,
+    1.8rem
+  );
+}
+
+.contact-panel > p {
+  color: #C5D3E4;
+
+  line-height: 1.8;
+}
+
+.contact-note,
+.contact-panel .contact-note {
+  margin-bottom: 0;
+
+  color: #B5C6DA;
+
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* Compatibilidade com detalhes de contato futuros */
+
+.contact-panel dl {
+  margin: 1.5rem 0 0;
+
+  font-size: 0.875rem;
+}
+
+.contact-panel dl div {
+  padding-block: 0.85rem;
+
+  border-top: 1px solid rgba(
+    128, 201, 255, 0.16
+  );
+}
+
+.contact-panel dt {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.contact-panel dd {
+  margin: 0.25rem 0 0;
+
+  color: #BFCFE0;
+}
+
+
+/* ==================================================
+   13. ANIMAÇÃO PROGRESSIVA
+================================================== */
+
+/*
+  As classes abaixo são utilizadas pelo
+  IntersectionObserver em main.js.
+
+  Não ocultamos cartões sem JavaScript.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .service-card.service-reveal-pending {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .service-card.service-reveal-ready {
+    animation:
+      mendoza-service-reveal 420ms ease both;
+  }
+
+  @keyframes mendoza-service-reveal {
+
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+
+}
+
+
+/* ==================================================
+   14. TABLET
+================================================== */
+
+@media (min-width: 640px) {
+
+  .process-list {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+}
+
+@media (min-width: 760px) {
+
+  .service-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+}
+
+
+/* ==================================================
+   15. DESKTOP
+================================================== */
+
+@media (min-width: 960px) {
+
+  .trust-grid,
+  .contact-grid {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+
+    gap: clamp(
+      3rem,
+      6vw,
+      6rem
+    );
+  }
+
+}
+
+@media (min-width: 1100px) {
+
+  .process-list {
+    grid-template-columns: repeat(
+      4,
+      minmax(0, 1fr)
+    );
+  }
+
+}
+
+
+/* ==================================================
+   16. MOBILE
+================================================== */
+
+@media (max-width: 759px) {
+
+  .hero {
+    min-height: 620px;
+
+    padding-block: clamp(
+      4rem,
+      9vw,
+      6rem
+    );
+
+    background-position: 64% center;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(3, 12, 24, 0.97) 0%,
+        rgba(3, 12, 24, 0.91) 45%,
+        rgba(3, 12, 24, 0.70) 100%
+      ),
+      url("../img/Vigil%C3%A2ncia%20Futurista%20e%20Conectividade%20Global.png");
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    max-width: 21ch;
+
+    font-size: clamp(
+      2.2rem,
+      7vw,
+      3.5rem
+    );
+
+    line-height: 1.15;
+  }
+
+  .hero .lead {
+    max-width: 46ch;
+
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .solutions-heading h2 {
+    max-width: 28ch;
+  }
+
+  .service-top {
+    margin-bottom: 1.75rem;
+  }
+
+  .trust-grid,
+  .contact-grid {
+    gap: 2rem;
+  }
+
+}
+
+
+/* ==================================================
+   17. MOBILE PEQUENO
+================================================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 660px;
+    background-position: 67% center;
+  }
+
+  .hero h1 {
+    font-size: clamp(
+      2.05rem,
+      9vw,
+      2.65rem
+    );
+
+    letter-spacing: -0.035em;
+  }
+
+  .hero .button {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-top {
+    gap: 0.75rem;
+  }
+
+  .service-icon {
+    flex-basis: 62px;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 15px;
+  }
+
+  .service-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-number {
+    font-size: 0.62rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.7rem;
+  }
+
+  .contact-panel {
+    padding: 1.5rem;
+  }
+
+}
+
+
+/* ==================================================
+   18. ACESSIBILIDADE / MOVIMENTO REDUZIDO
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-card,
+  .service-icon,
+  .service-arrow {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .service-card.service-reveal-pending,
+  .service-card.service-reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+
+  .service-card:hover,
+  .service-card:hover .service-icon,
+  .service-details summary:hover .service-arrow {
+    transform: none;
+  }
+
+}
+
+
+/* ==================================================
+   19. IMPRESSÃO
+================================================== */
+
+@media print {
+
+  .hero,
+  .solutions,
+  #processo,
+  #sobre,
+  .trust,
+  .contact {
+    background: none !important;
+    color: #111111 !important;
+  }
+
+  .hero h1,
+  .hero h1 span,
+  .hero .lead,
+  .hero .eyebrow,
+  .hero .hero-note,
+  .solutions h2,
+  .solutions h3,
+  .solutions p,
+  .solutions .eyebrow,
+  .solutions .service-card h3 span,
+  .service-description,
+  .service-detail-body,
+  .service-tags li,
+  .service-details summary,
+  .process-list h3,
+  .process-list p,
+  #sobre h2,
+  #sobre p,
+  .trust h2,
+  .trust .lead,
+  .principles li,
+  .contact h2,
+  .contact .lead,
+  .contact-panel h3,
+  .contact-panel p {
+    color: #111111 !important;
+  }
+
+  .service-card,
+  .process-list li,
+  .contact-panel {
+    background: none !important;
+    box-shadow: none !important;
+    border-color: #CCCCCC;
+  }
+
+  .service-card {
+    break-inside: avoid;
+  }
+
+  .service-card.service-reveal-pending,
+  .service-card.service-reveal-ready {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+}
+
+
+/* ==================================================
+   FIM — MENDOZA HOME CSS
+================================================== */

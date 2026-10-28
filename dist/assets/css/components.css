@@ -1,1 +1,956 @@
-.skip-link{position:absolute;top:1rem;left:1rem;transform:translateY(-200%);padding:.8rem 1rem;background:white;color:black;z-index:10}.skip-link:focus{transform:translateY(0)}.site-header{border-bottom:1px solid var(--line)}.header-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:calc(1.5rem - 15px)}.brand{text-decoration:none;display:block;max-width:calc(100% - 6rem)}.brand-logo{display:block;width:clamp(190px,25vw,290px);max-width:100%;height:auto}.footer-brand{max-width:100%}.footer-brand .brand-logo{width:220px}nav{display:flex;flex-wrap:wrap;gap:1rem 1.7rem;width:100%;font-size:.85rem}nav a{text-decoration:none}nav a:hover{text-decoration:underline}.nav-contact{color:#b4c7ff}.menu-toggle{background:transparent;color:var(--text);border:1px solid var(--line);padding:.5rem .9rem;cursor:pointer}nav[hidden]{display:none}.button{display:inline-flex;align-items:center;gap:2rem;background:var(--blue);color:white;text-decoration:none;padding:1rem 1.4rem;font-weight:700;font-size:.9rem}.button:hover{background:#2454d5}.section-heading{max-width:650px;margin-bottom:2.75rem}.section-heading>p:last-child{color:var(--muted)}.site-footer{border-top:1px solid var(--line);padding-block:2rem;color:var(--muted);font-size:.8rem}.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem}.footer-inner p{margin:0}.footer-inner strong{color:var(--text);letter-spacing:.1em}@media(min-width:800px){nav{width:auto;align-items:center}.menu-toggle{display:none}}
+
+/* ==========================================
+   MENDOZA — SEGURANÇA E TECNOLOGIA
+   COMPONENTS CSS | VERSÃO 2.0
+
+   Header, navegação, botões,
+   componentes e rodapé.
+
+   Compatível com:
+   - base.css
+   - home.css
+   - main.js existente
+========================================== */
+
+
+/* ==========================================
+   01. LINK DE ACESSIBILIDADE
+========================================== */
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+
+  padding: 0.85rem 1.2rem;
+
+  background: #FFFFFF;
+  color: #0A162B;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: #0A162B;
+}
+
+
+/* ==========================================
+   02. HEADER PRINCIPAL
+========================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  background: #0A162B;
+
+  border-bottom: 1px solid rgba(
+    128, 201, 255, 0.16
+  );
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Linha tecnológica na base do header */
+
+.site-header::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(8, 127, 231, 0.55) 50%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   03. CONTAINER DO HEADER
+========================================== */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  min-height: 86px;
+  padding-block: 0.75rem;
+}
+
+
+/* ==========================================
+   04. IDENTIDADE / LOGOTIPO
+========================================== */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 0;
+  max-width: calc(100% - 7rem);
+
+  text-decoration: none;
+
+  transition:
+    opacity var(--transition-fast);
+}
+
+.brand:hover {
+  opacity: 0.9;
+}
+
+.brand-logo {
+  display: block;
+
+  width: clamp(
+    180px,
+    24vw,
+    265px
+  );
+
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ==========================================
+   05. NAVEGAÇÃO
+========================================== */
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 0.35rem 1.1rem;
+
+  width: 100%;
+}
+
+.site-header nav a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0.55rem 0.3rem;
+
+  color: #D3DFED;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast);
+}
+
+/* Sublinhado animado */
+
+.site-header nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0.3rem;
+  right: 0.3rem;
+  bottom: 4px;
+
+  height: 2px;
+
+  background: var(--blue-light);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition:
+    transform var(--transition-normal);
+}
+
+.site-header nav a:hover {
+  color: #FFFFFF;
+}
+
+.site-header nav a:hover::after,
+.site-header nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================
+   06. DESTAQUE DE CONTATO
+========================================== */
+
+.site-header nav .nav-contact {
+  gap: 0.4rem;
+
+  padding-inline: 1rem;
+
+  border: 1px solid rgba(
+    8, 127, 231, 0.5
+  );
+
+  border-radius: var(--radius-sm);
+
+  background: rgba(
+    8, 127, 231, 0.1
+  );
+
+  color: #A8DCFF;
+
+  font-weight: 600;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.site-header nav .nav-contact::after {
+  display: none;
+}
+
+.site-header nav .nav-contact:hover {
+  background: rgba(
+    8, 127, 231, 0.2
+  );
+
+  border-color: var(--blue-light);
+  color: #FFFFFF;
+}
+
+
+/* ==========================================
+   07. BOTÃO DO MENU MOBILE
+========================================== */
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.65rem;
+
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+
+  border: 1px solid rgba(
+    128, 201, 255, 0.35
+  );
+
+  border-radius: var(--radius-sm);
+
+  background: #13243A;
+  color: #FFFFFF;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+/* Ícone decorativo com três linhas */
+
+.menu-toggle::before {
+  content: "";
+
+  display: block;
+
+  width: 18px;
+  height: 14px;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(
+      #80C9FF,
+      #80C9FF
+    ) center top / 18px 2px no-repeat,
+
+    linear-gradient(
+      #80C9FF,
+      #80C9FF
+    ) center center / 18px 2px no-repeat,
+
+    linear-gradient(
+      #80C9FF,
+      #80C9FF
+    ) center bottom / 18px 2px no-repeat;
+}
+
+.menu-toggle:hover {
+  background: #193454;
+  border-color: var(--blue-light);
+}
+
+.menu-toggle[aria-expanded="true"] {
+  background: rgba(
+    8, 127, 231, 0.22
+  );
+  border-color: var(--blue-light);
+}
+
+
+/* ==========================================
+   08. BOTÕES PRINCIPAIS
+========================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.85rem;
+
+  min-height: 50px;
+  max-width: 100%;
+
+  padding: 0.95rem 1.5rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  background: var(--blue);
+  color: #FFFFFF;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 18px rgba(
+      8, 127, 231, 0.18
+    );
+
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.button:hover {
+  background: var(--blue-hover);
+  color: #FFFFFF;
+
+  box-shadow:
+    0 10px 24px rgba(
+      8, 127, 231, 0.24
+    );
+
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button span[aria-hidden="true"] {
+  display: inline-block;
+  flex-shrink: 0;
+
+  font-size: 1.15rem;
+
+  transition:
+    transform var(--transition-normal);
+}
+
+.button:hover span[aria-hidden="true"] {
+  transform: translate(2px, -2px);
+}
+
+
+/* ==========================================
+   09. CABEÇALHOS DE SEÇÕES
+========================================== */
+
+.section-heading {
+  margin-bottom: clamp(
+    2rem,
+    4vw,
+    3rem
+  );
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+
+/* ==========================================
+   10. FOOTER PRINCIPAL
+========================================== */
+
+.site-footer {
+  position: relative;
+
+  padding-block: clamp(
+    2rem,
+    4vw,
+    3.5rem
+  );
+
+  background: #081321;
+
+  border-top: 1px solid rgba(
+    128, 201, 255, 0.14
+  );
+
+  color: var(--muted);
+
+  font-size: 0.875rem;
+}
+
+.site-footer::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(8, 127, 231, 0.45),
+    transparent
+  );
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 1.5rem 2.5rem;
+}
+
+.footer-brand {
+  max-width: 100%;
+}
+
+.footer-brand .brand-logo {
+  width: clamp(
+    175px,
+    22vw,
+    230px
+  );
+}
+
+.footer-inner p {
+  max-width: 38ch;
+  margin: 0;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footer-inner strong {
+  color: var(--text);
+}
+
+.footer-inner > a:last-child {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  color: #9AD5FF;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast);
+}
+
+.footer-inner > a:last-child:hover {
+  color: #FFFFFF;
+}
+
+
+/* ==========================================
+   11. DESKTOP
+========================================== */
+
+@media (min-width: 800px) {
+
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+
+  .site-header nav {
+    width: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    gap: clamp(
+      0.45rem,
+      1.1vw,
+      1.15rem
+    );
+  }
+
+  .site-header nav a {
+    font-size: clamp(
+      0.78rem,
+      0.95vw,
+      0.875rem
+    );
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================
+   12. TABLET E MOBILE
+========================================== */
+
+@media (max-width: 799px) {
+
+  .header-inner {
+    min-height: 76px;
+    gap: 0.75rem;
+  }
+
+  .brand-logo {
+    width: clamp(
+      170px,
+      42vw,
+      225px
+    );
+  }
+
+  .site-header nav {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0.25rem;
+
+    width: 100%;
+    padding: 0.75rem;
+
+    background: #101F33;
+
+    border: 1px solid rgba(
+      128, 201, 255, 0.18
+    );
+
+    border-radius: var(--radius-md);
+
+    box-shadow:
+      0 12px 24px rgba(
+        0, 0, 0, 0.14
+      );
+  }
+
+  .site-header nav a {
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 48px;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 0.95rem;
+  }
+
+  .site-header nav a::after {
+    display: none;
+  }
+
+  .site-header nav a:hover,
+  .site-header nav a:focus-visible {
+    background: rgba(
+      8, 127, 231, 0.13
+    );
+  }
+
+  .site-header nav .nav-contact {
+    justify-content: center;
+
+    margin-top: 0.4rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.25rem;
+  }
+
+}
+
+
+/* ==========================================
+   13. TELAS PEQUENAS
+========================================== */
+
+@media (max-width: 359px) {
+
+  .brand-logo {
+    width: 155px;
+  }
+
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .menu-toggle {
+    padding-inline: 0.65rem;
+  }
+
+  .button {
+    gap: 0.6rem;
+    padding-inline: 1rem;
+  }
+
+}
+
+
+/* ==========================================
+   14. NAVEGAÇÃO POR ÂNCORAS
+========================================== */
+
+/* Compensa a altura do header fixo */
+
+html {
+  scroll-padding-top: 6.25rem;
+}
+
+
+/* ==========================================
+   15. ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .brand,
+  .site-header nav a,
+  .site-header nav a::after,
+  .nav-contact,
+  .menu-toggle,
+  .button,
+  .button span[aria-hidden="true"],
+  .footer-inner > a:last-child {
+    transition: none !important;
+  }
+
+  .button:hover,
+  .button:active {
+    transform: none;
+  }
+
+  .button:hover span[aria-hidden="true"] {
+    transform: none;
+  }
+
+}
+
+
+/* ==========================================
+   FIM — COMPONENTS CSS
+========================================== */
+
+
+
+/* ==========================================
+   MENDOZA — FOOTER CLARO
+========================================== */
+
+.site-footer.mendoza-footer {
+  position: relative;
+
+  padding: 0;
+
+  background: #F5F8FC;
+  color: #14263D;
+
+  border-top: 3px solid #087FE7;
+}
+
+/* Eliminar línea decorativa oscura anterior */
+
+.mendoza-footer::before {
+  content: none;
+}
+
+/* Distribución principal */
+
+.mendoza-footer__top {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  gap: clamp(2rem, 5vw, 5rem);
+
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+/* Marca */
+
+.mendoza-footer__brand {
+  min-width: 0;
+}
+
+.mendoza-footer .footer-brand {
+  max-width: 100%;
+}
+
+.mendoza-footer__logo {
+  display: inline-flex;
+
+  padding: 0.75rem 1rem;
+
+  background: #0A162B;
+  border-radius: 12px;
+}
+
+.mendoza-footer__logo .brand-logo {
+  width: 210px;
+  max-width: 100%;
+  height: auto;
+}
+
+.mendoza-footer__brand p {
+  max-width: 34ch;
+
+  margin: 1.3rem 0;
+
+  color: #52637A;
+
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+/* Redes sociais */
+
+.mendoza-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin-top: 1.5rem;
+}
+
+.mendoza-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  background: #E5EFFB;
+  color: #087FE7;
+
+  border: 1px solid #CADDEF;
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+.mendoza-footer__social svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mendoza-footer__social a:hover {
+    background: #087FE7;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+  }
+}
+
+/* Links e informações */
+
+.mendoza-footer__links,
+.mendoza-footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 0.65rem;
+
+  min-width: 0;
+}
+
+.mendoza-footer__links h2,
+.mendoza-footer__info h2 {
+  margin-bottom: 0.8rem;
+
+  color: #14263D;
+
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.mendoza-footer__links a {
+  min-height: 28px;
+
+  color: #52637A;
+
+  font-size: 0.9rem;
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.mendoza-footer__links a:hover {
+  color: #087FE7;
+}
+
+.mendoza-footer__info p {
+  margin: 0;
+
+  color: #52637A;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Barra inferior */
+
+.mendoza-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  padding-block: 1.5rem;
+
+  border-top: 1px solid #D5E1ED;
+}
+
+.mendoza-footer__bottom p {
+  margin: 0;
+
+  color: #52637A;
+  font-size: 0.8rem;
+}
+
+.mendoza-footer__bottom a {
+  color: #087FE7;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mendoza-footer__bottom a:hover {
+  color: #075EA9;
+}
+
+/* Acessibilidade */
+
+.mendoza-footer a:focus-visible {
+  outline: 3px solid #087FE7;
+  outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .mendoza-footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mendoza-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 599px) {
+  .mendoza-footer__top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mendoza-footer__brand {
+    grid-column: auto;
+  }
+
+  .mendoza-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+  .mendoza-footer__social a,
+  .mendoza-footer__links a {
+    transition: none;
+  }
+
+  .mendoza-footer__social a:hover {
+    transform: none;
+  }
+}
+
