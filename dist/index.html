@@ -1,52 +1,64 @@
 
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0A162B">
 
+  <!-- SEO -->
   <meta
     name="description"
-    content="A MENDOZA oferece desenvolvimento de sites profissionais, infraestrutura de redes e soluções tecnológicas para empresas e condomínios. Conheça nossas soluções."
+    content="MENDOZA — desenvolvimento de sites profissionais e serviços de infraestrutura de TI para empresas e condomínios. Conheça nossas soluções."
   >
 
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+
   <meta
     property="og:title"
-    content="MENDOZA | Desenvolvimento Web e Infraestrutura de TI"
+    content="MENDOZA | Sites Profissionais e Infraestrutura de TI"
   >
+
   <meta
     property="og:description"
-    content="Soluções digitais e infraestrutura tecnológica para empresas e condomínios."
+    content="Desenvolvimento web e infraestrutura de TI para empresas e condomínios."
   >
 
-  <title>MENDOZA | Desenvolvimento Web e Infraestrutura de TI</title>
+  <title>MENDOZA | Sites Profissionais e Infraestrutura de TI</title>
 
   <!--
-    Ao definir o domínio, incluir:
-    canonical, og:url e imagem social definitiva.
+    Adicionar canonical, og:url e og:image
+    após definir o domínio oficial.
   -->
 
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/home.css">
 
+  <!-- JAVASCRIPT -->
   <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
 
+  <!-- ACESSIBILIDADE -->
   <a class="skip-link" href="#conteudo">
     Pular para o conteúdo
   </a>
 
-  <!-- CABEÇALHO -->
+  <!-- =====================================
+       HEADER
+  ====================================== -->
 
   <header class="site-header">
+
     <div class="container header-inner">
 
+      <!-- LOGOTIPO -->
       <a
         class="brand"
         href="#inicio"
@@ -62,6 +74,7 @@
         >
       </a>
 
+      <!-- MENU MOBILE -->
       <button
         class="menu-toggle"
         type="button"
@@ -72,6 +85,7 @@
         Menu
       </button>
 
+      <!-- NAVEGAÇÃO -->
       <nav
         id="menu-principal"
         aria-label="Navegação principal"
@@ -82,48 +96,49 @@
         <a href="#confianca">Compromissos</a>
 
         <a class="nav-contact" href="#contato">
-          Contato <span aria-hidden="true">↗</span>
+          Contato
+          <span aria-hidden="true">↗</span>
         </a>
       </nav>
 
     </div>
+
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- =====================================
+       CONTEÚDO PRINCIPAL
+  ====================================== -->
 
   <main id="conteudo">
 
-    <!-- 01 / HERO -->
-
-    <!--
-      A imagem de fundo permanece configurada
-      em assets/css/home.css.
-    -->
+    <!-- ===================================
+         01 / HERO
+    ==================================== -->
 
     <section
       class="hero section"
       id="inicio"
       aria-labelledby="hero-title"
     >
+
       <div class="container hero-grid">
 
         <div class="hero-copy">
 
           <p class="eyebrow">
-            MENDOZA — SEGURANÇA E TECNOLOGIA
+            PARA EMPRESAS E CONDOMÍNIOS
           </p>
 
           <h1 id="hero-title">
-            Tecnologia para conectar seu negócio
-            <span>
-              e fortalecer sua presença digital.
-            </span>
+            Sites profissionais e
+            <span>infraestrutura de TI.</span>
           </h1>
 
           <p class="lead">
-            Desenvolvimento de sites profissionais,
-            infraestrutura de redes e soluções tecnológicas
-            para empresas e condomínios.
+            Criamos sites para apresentar seu
+            negócio com clareza e oferecemos
+            diagnóstico, configuração e suporte
+            de redes e equipamentos.
           </p>
 
           <a class="button" href="#solucoes">
@@ -131,23 +146,22 @@
             <span aria-hidden="true">↗</span>
           </a>
 
-          <p class="hero-note">
-            Projetos digitais para todo o Brasil.
-            Atendimento técnico conforme escopo
-            e disponibilidade.
-          </p>
-
         </div>
+
       </div>
+
     </section>
 
-    <!-- 02 / SOLUÇÕES -->
+    <!-- ===================================
+         02 / SOLUÇÕES
+    ==================================== -->
 
     <section
       class="section solutions"
       id="solucoes"
       aria-labelledby="solutions-title"
     >
+
       <div class="container">
 
         <div class="section-heading solutions-heading">
@@ -157,22 +171,22 @@
           </p>
 
           <h2 id="solutions-title">
-            Soluções para sua empresa avançar
-            com tecnologia.
+            O que podemos fazer pela sua empresa.
           </h2>
 
           <p>
-            Uma presença digital profissional e uma
-            infraestrutura bem planejada ajudam sua
-            operação a trabalhar com mais clareza
-            e organização.
+            Duas áreas de atuação, com serviços
+            definidos conforme o objetivo
+            de cada projeto.
           </p>
 
         </div>
 
         <div class="service-grid">
 
-          <!-- INFRAESTRUTURA -->
+          <!-- ===========================
+               SERVIÇO 01 / INFRAESTRUTURA
+          ============================ -->
 
           <article
             class="service-card"
@@ -182,6 +196,7 @@
             <div class="service-top">
 
               <span class="service-icon" aria-hidden="true">
+
                 <svg
                   viewBox="0 0 64 64"
                   fill="none"
@@ -197,6 +212,7 @@
                   <rect x="44" y="42" width="16" height="14" rx="3"/>
                   <path d="M32 36v6"/>
                 </svg>
+
               </span>
 
               <span class="service-number" aria-hidden="true">
@@ -211,15 +227,15 @@
             </h3>
 
             <p class="service-description">
-              Diagnóstico, configuração e suporte de
-              redes e equipamentos, com soluções
-              dimensionadas às necessidades
-              de cada ambiente.
+              Problemas de conectividade ou equipamentos
+              que precisam de configuração? Avaliamos
+              o ambiente e propomos soluções técnicas
+              adequadas à situação.
             </p>
 
             <ul
               class="service-tags"
-              aria-label="Áreas de atuação em infraestrutura"
+              aria-label="Áreas de infraestrutura"
             >
               <li>Redes e conectividade</li>
               <li>Diagnóstico técnico</li>
@@ -230,32 +246,34 @@
 
               <summary>
                 Conhecer solução
-                <span class="service-arrow" aria-hidden="true">
-                  →
-                </span>
+                <span class="service-arrow" aria-hidden="true">→</span>
               </summary>
 
               <div class="service-detail-body">
 
                 <p>
-                  Avaliamos as necessidades do ambiente
-                  para propor ajustes, configurações e
-                  serviços técnicos de infraestrutura de TI.
+                  O atendimento pode incluir levantamento
+                  das condições da rede, identificação
+                  de pontos de atenção e ajustes em
+                  equipamentos, conforme avaliação técnica.
                 </p>
 
                 <p>
-                  A disponibilidade de atendimento presencial,
-                  o escopo e os prazos são definidos em cada
-                  proposta. Monitoramento remoto de segurança
-                  eletrônica não faz parte da oferta atual.
+                  Serviços presenciais dependem da
+                  localização e da disponibilidade.
+                  As atividades incluídas são
+                  confirmadas na proposta.
                 </p>
 
               </div>
+
             </details>
 
           </article>
 
-          <!-- DESENVOLVIMENTO WEB -->
+          <!-- ===========================
+               SERVIÇO 02 / WEB
+          ============================ -->
 
           <article
             class="service-card"
@@ -265,6 +283,7 @@
             <div class="service-top">
 
               <span class="service-icon" aria-hidden="true">
+
                 <svg
                   viewBox="0 0 64 64"
                   fill="none"
@@ -278,6 +297,7 @@
                   <rect x="44" y="30" width="16" height="28" rx="3"/>
                   <path d="M50 52h4"/>
                 </svg>
+
               </span>
 
               <span class="service-number" aria-hidden="true">
@@ -292,62 +312,66 @@
             </h3>
 
             <p class="service-description">
-              Sites institucionais modernos, responsivos
-              e feitos para apresentar seus serviços
-              com clareza e facilitar o contato
-              com seu público.
+              Seu cliente encontra sua empresa na internet
+              e entende o que ela oferece? Desenvolvemos
+              sites institucionais claros, responsivos
+              e fáceis de navegar.
             </p>
 
             <ul
               class="service-tags"
-              aria-label="Áreas de atuação em desenvolvimento web"
+              aria-label="Áreas de desenvolvimento web"
             >
               <li>Sites institucionais</li>
               <li>Design responsivo</li>
-              <li>Desempenho e acessibilidade</li>
+              <li>Navegação acessível</li>
             </ul>
 
             <details class="service-details">
 
               <summary>
                 Conhecer solução
-                <span class="service-arrow" aria-hidden="true">
-                  →
-                </span>
+                <span class="service-arrow" aria-hidden="true">→</span>
               </summary>
 
               <div class="service-detail-body">
 
                 <p>
-                  Organizamos o conteúdo da sua empresa e
-                  desenvolvemos páginas adaptadas a
-                  computadores, tablets e celulares,
-                  com navegação objetiva.
+                  Organizamos os serviços, as informações
+                  e os diferenciais da empresa em páginas
+                  adaptadas a celulares, tablets
+                  e computadores.
                 </p>
 
                 <p>
-                  Cada projeto recebe um escopo próprio,
-                  incluindo as funcionalidades acordadas
-                  e a integração dos canais oficiais
-                  fornecidos pelo cliente.
+                  Os recursos e as integrações com
+                  canais de contato são definidos
+                  conforme a necessidade e o material
+                  fornecido pelo cliente.
                 </p>
 
               </div>
+
             </details>
 
           </article>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- 03 / PROCESSO -->
+    <!-- ===================================
+         03 / COMO TRABALHAMOS
+    ==================================== -->
 
     <section
       class="section"
       id="processo"
       aria-labelledby="process-title"
     >
+
       <div class="container">
 
         <div class="section-heading">
@@ -357,13 +381,13 @@
           </p>
 
           <h2 id="process-title">
-            Um processo claro, do início à entrega.
+            Do primeiro contato à entrega.
           </h2>
 
           <p>
-            Cada projeto começa com uma conversa sobre
-            o que sua empresa precisa. A partir daí,
-            organizamos as próximas etapas.
+            Um fluxo de trabalho organizado para que
+            você acompanhe as principais decisões
+            do projeto.
           </p>
 
         </div>
@@ -374,8 +398,8 @@
             <span class="step-number" aria-hidden="true">01</span>
             <h3>Entender</h3>
             <p>
-              Conversamos sobre o ambiente, os objetivos
-              e os desafios do projeto.
+              Ouvimos seu objetivo e conhecemos
+              o contexto do projeto.
             </p>
           </li>
 
@@ -383,8 +407,8 @@
             <span class="step-number" aria-hidden="true">02</span>
             <h3>Definir</h3>
             <p>
-              Identificamos necessidades e delimitamos
-              os serviços adequados.
+              Identificamos o serviço necessário
+              e seus requisitos.
             </p>
           </li>
 
@@ -392,8 +416,8 @@
             <span class="step-number" aria-hidden="true">03</span>
             <h3>Planejar</h3>
             <p>
-              Apresentamos o escopo, as condições e os
-              próximos passos para aprovação.
+              Apresentamos a proposta e alinhamos
+              as entregas previstas.
             </p>
           </li>
 
@@ -401,23 +425,27 @@
             <span class="step-number" aria-hidden="true">04</span>
             <h3>Executar</h3>
             <p>
-              Realizamos as entregas previstas e
-              comunicamos o andamento do trabalho.
+              Realizamos o trabalho aprovado
+              e informamos seu andamento.
             </p>
           </li>
 
         </ol>
 
       </div>
+
     </section>
 
-    <!-- 04 / SOBRE NÓS -->
+    <!-- ===================================
+         04 / SOBRE NÓS
+    ==================================== -->
 
     <section
       class="section"
       id="sobre"
       aria-labelledby="about-title"
     >
+
       <div class="container trust-grid">
 
         <div>
@@ -427,7 +455,8 @@
           </p>
 
           <h2 id="about-title">
-            Tecnologia com atenção a cada projeto.
+            Uma atuação que conecta
+            Chapecó e Curitiba.
           </h2>
 
         </div>
@@ -435,38 +464,39 @@
         <div>
 
           <p class="lead">
-            A MENDOZA está estruturando sua atuação
-            em soluções digitais e infraestrutura
-            tecnológica para empresas e condomínios.
+            A MENDOZA nasce da colaboração entre
+            Chapecó (SC) e Curitiba (PR), com foco
+            em serviços tecnológicos para negócios.
           </p>
 
           <p>
-            Com colaboração entre Chapecó (SC) e
-            Curitiba (PR), nosso objetivo é aproximar
-            tecnologia e necessidades reais
-            de cada cliente.
+            Projetos de desenvolvimento web podem
+            ser conduzidos remotamente para clientes
+            em todo o Brasil.
           </p>
 
           <p>
-            O desenvolvimento de sites pode ser
-            realizado remotamente para clientes de
-            todo o Brasil. Serviços técnicos presenciais
-            dependem da localização, da disponibilidade
-            e da proposta aprovada.
+            A viabilidade de atendimentos técnicos
+            presenciais é avaliada conforme a região
+            e a natureza da demanda.
           </p>
 
         </div>
 
       </div>
+
     </section>
 
-    <!-- 05 / COMPROMISSOS -->
+    <!-- ===================================
+         05 / COMPROMISSOS
+    ==================================== -->
 
     <section
       class="section trust"
       id="confianca"
       aria-labelledby="trust-title"
     >
+
       <div class="container trust-grid">
 
         <div>
@@ -476,7 +506,7 @@
           </p>
 
           <h2 id="trust-title">
-            Confiança se constrói com clareza.
+            O que você pode esperar da MENDOZA.
           </h2>
 
         </div>
@@ -484,47 +514,50 @@
         <div>
 
           <p class="lead">
-            Antes de iniciar um projeto, você deve
-            entender o que será feito, quais são
-            as condições e como será a comunicação.
+            Informações objetivas para decidir
+            com segurança antes de contratar.
           </p>
 
           <ul class="principles">
+
             <li>
-              Escopo e entregas explicados
-              antes da contratação.
+              Descrição clara do serviço
+              e das entregas previstas.
             </li>
+
             <li>
-              Comunicação objetiva durante
-              o desenvolvimento ou atendimento.
+              Definição do que está incluído
+              na proposta.
             </li>
+
             <li>
-              Soluções proporcionais à necessidade
-              de cada projeto.
+              Alinhamento sobre prazos
+              e condições de atendimento.
             </li>
+
             <li>
-              Transparência sobre disponibilidade,
-              prazos e limitações.
+              Comunicação durante a execução
+              do projeto.
             </li>
+
           </ul>
 
         </div>
 
       </div>
+
     </section>
 
-    <!-- 06 / CONTATO -->
-
-    <!--
-      Os canais oficiais ainda não foram definidos.
-      Não utilizar contatos fictícios.
-    -->
+    <!-- ===================================
+         06 / CONTATO
+    ==================================== -->
 
     <section
       class="section contact"
       id="contato"
       aria-labelledby="contact-title"
     >
+
       <div class="container contact-grid">
 
         <div>
@@ -534,222 +567,217 @@
           </p>
 
           <h2 id="contact-title">
-            Vamos conversar sobre seu projeto.
+            Conte o que sua empresa precisa.
           </h2>
 
           <p class="lead">
-            Desenvolvimento web, conectividade ou
-            infraestrutura tecnológica: a primeira
-            etapa é entender sua necessidade.
+            Para avaliar uma solicitação, precisamos
+            conhecer o serviço desejado, a cidade
+            e o objetivo do projeto.
           </p>
 
         </div>
 
         <aside
           class="contact-panel"
-          aria-label="Informações de atendimento comercial"
+          aria-label="Informações de contato comercial"
         >
 
           <span class="status">
-            ATENDIMENTO COMERCIAL
+            CANAIS EM PREPARAÇÃO
           </span>
 
           <h3>
-            Canais oficiais em organização
+            Atendimento comercial
           </h3>
 
           <p>
-            Estamos preparando os canais de contato
-            da MENDOZA. Assim que forem confirmados,
-            estarão disponíveis nesta página.
+            Os contatos oficiais da MENDOZA
+            serão disponibilizados aqui
+            após confirmação.
           </p>
 
           <p class="contact-note">
-            Esta versão institucional ainda não
-            recebe solicitações de orçamento.
+            Este site ainda não recebe
+            pedidos de orçamento.
           </p>
-
-          <!--
-            Inserir aqui e-mail e/ou WhatsApp
-            oficiais antes do lançamento comercial.
-          -->
 
         </aside>
 
       </div>
+
     </section>
 
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- =====================================
+       FOOTER MENDOZA
+  ====================================== -->
 
-  
-<!-- FOOTER MENDOZA -->
+  <footer class="site-footer mendoza-footer">
 
-<footer class="site-footer mendoza-footer">
+    <div class="container">
 
-  <div class="container">
+      <div class="mendoza-footer__top">
 
-    <div class="mendoza-footer__top">
+        <!-- MARCA -->
 
-      <!-- IDENTIDADE DA MARCA -->
+        <div class="mendoza-footer__brand">
 
-      <div class="mendoza-footer__brand">
+          <a
+            class="brand footer-brand mendoza-footer__logo"
+            href="#inicio"
+            aria-label="MENDOZA — Voltar ao início"
+          >
+            <img
+              class="brand-logo"
+              src="assets/img/Logo%20tecnol%C3%B3gico%20Mendoza_%20seguridad%20y%20tecnolog%C3%ADa.png"
+              alt=""
+              width="2172"
+              height="724"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
 
-        <a
-          class="brand footer-brand mendoza-footer__logo"
-          href="#inicio"
-          aria-label="MENDOZA — Voltar ao início"
+          <p>
+            Presença digital e suporte
+            à infraestrutura de TI.
+          </p>
+
+          <!-- REDES SOCIAIS -->
+
+          <!--
+            Ícones visuais.
+            Adicionar links apenas quando
+            os perfis oficiais forem confirmados.
+          -->
+
+          <div
+            class="mendoza-footer__social"
+            aria-label="Redes sociais em preparação"
+          >
+
+            <!-- FACEBOOK -->
+
+            <span
+              class="mendoza-footer__social-icon"
+              role="img"
+              aria-label="Facebook — perfil em preparação"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"
+                />
+              </svg>
+
+            </span>
+
+            <!-- INSTAGRAM -->
+
+            <span
+              class="mendoza-footer__social-icon"
+              role="img"
+              aria-label="Instagram — perfil em preparação"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="5.5"
+                />
+
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.3"
+                />
+
+                <circle
+                  cx="17.8"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <!-- LINKS RÁPIDOS -->
+
+        <nav
+          class="mendoza-footer__links"
+          aria-label="Navegação do rodapé"
         >
-          <img
-            class="brand-logo"
-            src="assets/img/Logo%20tecnol%C3%B3gico%20Mendoza_%20seguridad%20y%20tecnolog%C3%ADa.png"
-            alt=""
-            width="2172"
-            height="724"
-            loading="lazy"
-            decoding="async"
-          >
-        </a>
 
-        <p>
-          Soluções digitais e infraestrutura
-          tecnológica para empresas e condomínios.
-        </p>
+          <h2>Links rápidos</h2>
 
-        <!-- REDES SOCIAIS -->
+          <a href="#inicio">Início</a>
+          <a href="#solucoes">Soluções</a>
+          <a href="#processo">Como trabalhamos</a>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#contato">Contato</a>
 
-        <div class="mendoza-footer__social">
+        </nav>
 
-          <!-- FACEBOOK -->
+        <!-- LOCALIZAÇÃO -->
 
-          <a
-            href="https://www.facebook.com/SEU_PERFIL"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook da MENDOZA"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                fill="currentColor"
-                d="M22 12a10 10 0 1 0-11.56
-                9.88v-6.99H7.9V12h2.54V9.8
-                c0-2.5 1.49-3.89 3.77-3.89
-                1.09 0 2.23.2 2.23.2v2.46
-                h-1.26c-1.24 0-1.62.77
-                -1.62 1.56V12h2.77l-.44
-                2.89h-2.33v6.99A10 10
-                0 0 0 22 12Z"
-              />
-            </svg>
-          </a>
+        <div class="mendoza-footer__info">
 
-          <!-- INSTAGRAM -->
+          <h2>Onde estamos</h2>
 
-          <a
-            href="https://www.instagram.com/SEU_PERFIL/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram da MENDOZA"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <rect
-                x="2.5"
-                y="2.5"
-                width="19"
-                height="19"
-                rx="5.5"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="4.3"
-              />
-              <circle
-                cx="17.8"
-                cy="6.5"
-                r="1"
-                fill="currentColor"
-                stroke="none"
-              />
-            </svg>
-          </a>
+          <p>Chapecó — SC</p>
+          <p>Curitiba — PR</p>
+
+          <p>
+            Projetos web com atendimento remoto.
+          </p>
 
         </div>
 
       </div>
 
-      <!-- NAVEGAÇÃO -->
+      <!-- FOOTER INFERIOR -->
 
-      <nav
-        class="mendoza-footer__links"
-        aria-label="Navegação do rodapé"
-      >
-        <h2>Links rápidos</h2>
-
-        <a href="#inicio">Início</a>
-        <a href="#solucoes">Soluções</a>
-        <a href="#processo">Como trabalhamos</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#contato">Contato</a>
-      </nav>
-
-      <!-- ATUAÇÃO -->
-
-      <div class="mendoza-footer__info">
-
-        <h2>Nossa atuação</h2>
+      <div class="mendoza-footer__bottom">
 
         <p>
-          Desenvolvimento Web
+          © 2026 MENDOZA — Segurança e Tecnologia.
+          Todos os direitos reservados.
         </p>
 
-        <p>
-          Infraestrutura de TI
-        </p>
-
-        <p>
-          Chapecó — SC
-          <br>
-          Curitiba — PR
-        </p>
+        <a href="#inicio">
+          Voltar ao início ↑
+        </a>
 
       </div>
 
     </div>
 
-    <!-- BARRA INFERIOR -->
-
-    <div class="mendoza-footer__bottom">
-
-      <p>
-        © MENDOZA — Segurança e Tecnologia.
-        Todos os direitos reservados.
-      </p>
-
-      <a href="#inicio">
-        Voltar ao início ↑
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
-
+  </footer>
 
 </body>
 </html>

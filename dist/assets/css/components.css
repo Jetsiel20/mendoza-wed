@@ -954,3 +954,30 @@ html {
   }
 }
 
+
+
+/* ==========================================
+   MENDOZA — REDES SOCIAIS EM PREPARAÇÃO
+========================================== */
+
+.mendoza-footer__social .mendoza-footer__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  background: #E5EFFB;
+  color: #087FE7;
+
+  border: 1px solid #CADDEF;
+  border-radius: 12px;
+}
+
+.mendoza-footer__social .mendoza-footer__social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+
