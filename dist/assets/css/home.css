@@ -25,9 +25,9 @@
   display: flex;
   align-items: center;
 
-  min-height: clamp(610px, 76svh, 790px);
+  min-height: clamp(500px, 68svh, 660px);
 
-  padding-block: clamp(5rem, 8vw, 8rem);
+  padding-block: clamp(4rem, 6vw, 6rem);
 
   overflow: hidden;
 
@@ -36,16 +36,15 @@
   background-image:
     linear-gradient(
       90deg,
-      rgba(3, 12, 24, 0.98) 0%,
-      rgba(3, 12, 24, 0.94) 24%,
-      rgba(3, 12, 24, 0.77) 46%,
-      rgba(3, 12, 24, 0.32) 75%,
-      rgba(3, 12, 24, 0.12) 100%
+      rgba(4, 12, 24, 0.9) 0%,
+      rgba(4, 12, 24, 0.78) 38%,
+      rgba(4, 12, 24, 0.4) 60%,
+      rgba(4, 12, 24, 0.08) 100%
     ),
-    url("../img/Sala\ de\ Operações\ de\ TI\ em\ Azul\ Profundo.png");
+    url("../img/Profissional%20de%20Seguran%C3%A7a%20no%20Condom%C3%ADnio%20Moderno%20%281%29.png");
 
   background-size: cover;
-  background-position: center right;
+  background-position: right top;
   background-repeat: no-repeat;
 
   border-bottom: 1px solid rgba(8, 127, 231, 0.28);
@@ -84,44 +83,45 @@
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 620px;
 }
 
 .hero .eyebrow {
-  color: #87C7FF;
-  margin-bottom: 1.5rem;
+  max-width: 44ch;
+  margin-bottom: 1.25rem;
+  color: #A9D7FF;
 }
 
 .hero h1 {
-  max-width: 19ch;
+  max-width: 16ch;
 
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 
   color: #FFFFFF;
 
   font-size: clamp(
-    2.4rem,
-    4.5vw,
-    4.15rem
+    2.35rem,
+    4vw,
+    3.8rem
   );
 
-  line-height: 1.12;
-  letter-spacing: -0.045em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
 .hero h1 span {
   display: block;
 
-  color: #BBDFFF;
+  color: #C7E4FF;
 }
 
 .hero .lead {
-  max-width: 48ch;
+  max-width: 53ch;
 
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 
-  color: #D5E1EF;
+  color: #E1E9F2;
 
   font-size: clamp(
     1rem,
@@ -143,17 +143,6 @@
   background: var(--blue-hover);
 }
 
-.hero-note,
-.hero .hero-note {
-  margin: 1.75rem 0 0;
-
-  max-width: 54ch;
-
-  color: #B9CDE0;
-
-  font-size: 0.8rem;
-  line-height: 1.65;
-}
 
 
 /* ==================================================
@@ -925,32 +914,10 @@
   line-height: 1.7;
 }
 
-/* Compatibilidade com detalhes de contato futuros */
 
-.contact-panel dl {
-  margin: 1.5rem 0 0;
 
-  font-size: 0.875rem;
-}
 
-.contact-panel dl div {
-  padding-block: 0.85rem;
 
-  border-top: 1px solid rgba(
-    128, 201, 255, 0.16
-  );
-}
-
-.contact-panel dt {
-  font-weight: 700;
-  color: #FFFFFF;
-}
-
-.contact-panel dd {
-  margin: 0.25rem 0 0;
-
-  color: #BFCFE0;
-}
 
 
 /* ==================================================
@@ -1060,24 +1027,26 @@
 @media (max-width: 759px) {
 
   .hero {
-    min-height: 620px;
+    display: block;
+    min-height: 0;
+    padding-block: 0;
+    background-image: none;
+  }
 
-    padding-block: clamp(
-      4rem,
-      9vw,
-      6rem
-    );
+  .hero::before {
+    content: none;
+  }
 
-    background-position: 64% center;
+  .hero::after {
+    content: "";
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: url("../img/Profissional%20de%20Seguran%C3%A7a%20no%20Condom%C3%ADnio%20Moderno%20%281%29.png") center top / cover no-repeat;
+  }
 
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(3, 12, 24, 0.97) 0%,
-        rgba(3, 12, 24, 0.91) 45%,
-        rgba(3, 12, 24, 0.70) 100%
-      ),
-      url("../img/Vigil%C3%A2ncia%20Futurista%20e%20Conectividade%20Global.png");
+  .hero-grid {
+    padding-block: 3rem;
   }
 
   .hero-copy {
@@ -1085,7 +1054,7 @@
   }
 
   .hero h1 {
-    max-width: 21ch;
+    max-width: 17ch;
 
     font-size: clamp(
       2.2rem,
@@ -1100,7 +1069,11 @@
     max-width: 46ch;
 
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 1.65;
+  }
+
+  .solutions-heading {
+    margin-bottom: 2rem;
   }
 
   .solutions-heading h2 {
@@ -1124,11 +1097,6 @@
 ================================================== */
 
 @media (max-width: 480px) {
-
-  .hero {
-    min-height: 660px;
-    background-position: 67% center;
-  }
 
   .hero h1 {
     font-size: clamp(
@@ -1219,6 +1187,10 @@
 
 @media print {
 
+  .hero::after {
+    content: none;
+  }
+
   .hero,
   .solutions,
   #processo,
@@ -1233,7 +1205,6 @@
   .hero h1 span,
   .hero .lead,
   .hero .eyebrow,
-  .hero .hero-note,
   .solutions h2,
   .solutions h3,
   .solutions p,

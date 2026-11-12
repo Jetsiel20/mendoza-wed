@@ -34,7 +34,7 @@
   */
 
   const desktop = window.matchMedia(
-    '(min-width: 1100px)'
+    '(min-width: 800px)'
   );
 
 

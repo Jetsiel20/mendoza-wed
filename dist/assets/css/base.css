@@ -20,18 +20,14 @@
 
   /* Cores principais */
   --bg: #101216;
-  --surface: #191C22;
-  --surface-alt: #0A162B;
 
   --text: #F1F5F9;
   --muted: #B8C5D5;
-  --line: #353B46;
 
   /* Identidade MENDOZA */
   --blue: #087FE7;
   --blue-hover: #0969BD;
   --blue-light: #80C9FF;
-  --blue-deep: #0A162B;
 
   /* Tipografia */
   --font-main:
@@ -54,12 +50,7 @@
   --radius-md: 14px;
   --radius-lg: 20px;
 
-  /* Sombras */
-  --shadow-soft:
-    0 12px 32px rgba(0, 0, 0, 0.18);
 
-  --shadow-blue:
-    0 12px 35px rgba(8, 127, 231, 0.16);
 
   /* Transições */
   --transition-fast: 180ms ease;
@@ -294,15 +285,6 @@ summary:focus-visible {
   line-height: 1.75;
 }
 
-.pending {
-  padding-left: 1rem;
-
-  border-left: 2px solid var(--blue);
-
-  color: var(--muted);
-
-  font-size: 0.875rem;
-}
 
 
 /* ==========================================
@@ -323,9 +305,9 @@ summary:focus-visible {
 
   :root {
     --space: clamp(
-      3.5rem,
-      9vw,
-      5rem
+      3rem,
+      8vw,
+      4rem
     );
   }
 
