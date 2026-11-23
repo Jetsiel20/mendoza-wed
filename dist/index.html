@@ -1,80 +1,39 @@
-
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0A162B">
-
-  <!-- SEO -->
-  <meta
-    name="description"
-    content="MENDOZA — desenvolvimento de sites profissionais e serviços de infraestrutura de TI para empresas e condomínios. Conheça nossas soluções."
-  >
-
-  <!-- OPEN GRAPH -->
+  <meta name="theme-color" content="#101E31">
+  <meta name="description" content="Redes e monitoramento para condomínios e desenvolvimento de sites institucionais para empresas.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="MENDOZA — Redes para condomínios e sites institucionais">
+  <meta property="og:description" content="Configuração e documentação de redes para condomínios. Sites institucionais claros e responsivos para empresas.">
+  <title>MENDOZA | Redes para condomínios e sites institucionais</title>
 
-  <meta
-    property="og:title"
-    content="MENDOZA | Sites Profissionais e Infraestrutura de TI"
-  >
-
-  <meta
-    property="og:description"
-    content="Desenvolvimento web e infraestrutura de TI para empresas e condomínios."
-  >
-
-  <title>MENDOZA | Sites Profissionais e Infraestrutura de TI</title>
-
-  <!--
-    Adicionar canonical, og:url e og:image
-    após definir o domínio oficial.
-  -->
-
-  <!-- CSS -->
+  <!-- Add canonical and social image URLs after the official domain and images are confirmed. -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/home.css">
-
-  <!-- JAVASCRIPT -->
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/privacy-notice.js" defer></script>
 </head>
-
 <body>
-
-  <!-- ACESSIBILIDADE -->
-  <a class="skip-link" href="#conteudo">
-    Pular para o conteúdo
-  </a>
-
-  <!-- =====================================
-       HEADER
-  ====================================== -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="site-header">
-
     <div class="container header-inner">
-
-      <!-- LOGOTIPO -->
-      <a
-        class="brand"
-        href="#inicio"
-        aria-label="MENDOZA — Página inicial"
-      >
+      <a class="brand" href="#inicio" aria-label="MENDOZA — Início">
         <img
-          class="brand-logo"
-          src="assets/img/Logo tecnológico Mendoza_ seguridad y tecnología.png"
-          alt="MENDOZA — Segurança e Tecnologia"
+          class="brand__logo"
+          src="assets/img/MENDOZA_LOGO_ORIGINAL.png"
+          alt=""
           width="2172"
           height="724"
-          decoding="async"
         >
       </a>
 
-      <!-- MENU MOBILE -->
       <button
         class="menu-toggle"
         type="button"
@@ -82,702 +41,274 @@
         aria-controls="menu-principal"
         hidden
       >
-        Menu
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__label">Menu</span>
       </button>
 
-      <!-- NAVEGAÇÃO -->
-      <nav
-        id="menu-principal"
-        aria-label="Navegação principal"
-      >
-        <a href="#solucoes">Soluções</a>
-        <a href="#processo">Como trabalhamos</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#confianca">Compromissos</a>
-
-        <a class="nav-contact" href="#contato">
-          Contato
-          <span aria-hidden="true">↗</span>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a class="site-nav__service" href="#redes-condominios">
+          <span>Redes para condomínios</span>
+          <span class="site-nav__number" aria-hidden="true">01</span>
         </a>
+        <a class="site-nav__service" href="#sites-institucionais">
+          <span>Sites para empresas</span>
+          <span class="site-nav__number" aria-hidden="true">02</span>
+        </a>
+        <a href="#processo">Nosso processo</a>
+        <a href="#sobre">Sobre a MENDOZA</a>
       </nav>
-
     </div>
-
   </header>
 
-  <!-- =====================================
-       CONTEÚDO PRINCIPAL
-  ====================================== -->
+  <aside class="privacy-notice" id="aviso-privacidade" aria-labelledby="privacy-notice-title" hidden>
+    <div class="container privacy-notice__content">
+      <div>
+        <h2 id="privacy-notice-title">Aviso de privacidade</h2>
+        <p>
+          O código deste site não inclui cookies de análise ou publicidade.
+          Consulte o <a href="privacidade.html">rascunho da política de privacidade</a>
+          para conhecer as informações disponíveis e as que ainda precisam ser confirmadas.
+        </p>
+      </div>
+      <button class="button button--primary privacy-notice__close" type="button">Entendi</button>
+    </div>
+  </aside>
 
   <main id="conteudo">
-
-    <!-- ===================================
-         01 / HERO
-    ==================================== -->
-
-    <section
-      class="hero section"
-      id="inicio"
-      aria-labelledby="hero-title"
-    >
-
-      <div class="container hero-grid">
-
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-layout">
         <div class="hero-copy">
-
           <p class="eyebrow">
-            REDES PARA CONDOMÍNIOS
+            Redes para condomínios <span aria-hidden="true">·</span> Sites institucionais
           </p>
-
-          <h1 id="hero-title">
-            Rede configurada.
-            <span>Topologia documentada.</span>
-          </h1>
-
-          <p class="lead">
-            Monitoramento da disponibilidade por IP e inventário
-            da rede em planilha.
+          <h1 id="hero-title">Redes para condomínios. <span>Sites para empresas.</span></h1>
+          <p class="hero-copy__intro">
+            Configuração e documentação de redes, com monitoramento de disponibilidade por IP.
+            Sites institucionais para apresentar empresas e seus serviços com clareza.
           </p>
-
-          <a class="button" href="#solucoes">
-            Ver soluções
-            <span aria-hidden="true">↗</span>
-          </a>
-
+          <div class="hero-actions">
+            <a
+              class="button button--whatsapp"
+              href="https://wa.me/5541995474569?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MENDOZA%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar pelo WhatsApp
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#servicos">Conheça as duas frentes</a>
+          </div>
         </div>
 
+        <figure class="hero-photo-slot">
+          <img
+            class="hero-photo-slot__image"
+            src="assets/img/Profissional%20de%20Seguran%C3%A7a%20no%20Condom%C3%ADnio%20Moderno.png"
+            alt="CEO da MENDOZA em frente a um condomínio residencial"
+            width="1672"
+            height="941"
+            fetchpriority="high"
+          >
+        </figure>
       </div>
-
+      <div class="hero-bottom-line">
+        <span>Configuração de redes</span>
+        <span>Monitoramento por IP</span>
+        <span>Sites institucionais responsivos</span>
+      </div>
     </section>
 
-    <!-- ===================================
-         02 / SOLUÇÕES
-    ==================================== -->
-
-    <section
-      class="section solutions"
-      id="solucoes"
-      aria-labelledby="solutions-title"
-    >
-
+    <section class="section services" id="servicos" aria-labelledby="services-title">
       <div class="container">
-
-        <div class="section-heading solutions-heading">
-
-          <p class="eyebrow">
-            01 / SOLUÇÕES
-          </p>
-
-          <h2 id="solutions-title">
-            Duas frentes de trabalho, com escopos diferentes.
-          </h2>
-
-          <p>
-            Duas áreas de atuação, com serviços
-            definidos conforme o objetivo
-            de cada projeto.
-          </p>
-
+        <div class="section-heading">
+          <p class="eyebrow eyebrow--dark">O que fazemos</p>
+          <h2 id="services-title">Duas frentes. <span>Escopos claros.</span></h2>
+          <p>Conheça as entregas de cada serviço e o que precisa ser combinado antes do início.</p>
         </div>
 
         <div class="service-grid">
-
-          <!-- ===========================
-               SERVIÇO 01 / REDES PARA CONDOMÍNIOS
-          ============================ -->
-
           <article
-            class="service-card"
-            aria-labelledby="infra-title"
+            class="service-card service-card--network"
+            id="redes-condominios"
+            aria-labelledby="network-title"
           >
-
-            <div class="service-top">
-
-              <span class="service-icon" aria-hidden="true">
-
-                <svg
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="20" y="6" width="24" height="18" rx="3"/>
-                  <path d="M26 12h12M26 18h6M32 24v12M12 42v-6h40v6"/>
-                  <rect x="4" y="42" width="16" height="14" rx="3"/>
-                  <rect x="24" y="42" width="16" height="14" rx="3"/>
-                  <rect x="44" y="42" width="16" height="14" rx="3"/>
-                  <path d="M32 36v6"/>
-                </svg>
-
-              </span>
-
-              <span class="service-number" aria-hidden="true">
-                01 / CONECTAR
-              </span>
-
+            <div class="service-card__topline">
+              <span class="service-card__number">01</span>
+              <span class="service-card__category">Para condomínios</span>
             </div>
-
-            <h3 id="infra-title">
-              Redes e monitoramento
-              <span>para condomínios</span>
-            </h3>
-
-            <p class="service-description">
-              Configuração da rede e dos equipamentos
-              do condomínio, com acompanhamento da
-              disponibilidade por endereço IP e
-              documentação da infraestrutura.
+            <h3 id="network-title">Redes e monitoramento</h3>
+            <p class="service-card__summary">
+              Uma visão organizada da infraestrutura de rede do condomínio:
+              equipamentos configurados, disponibilidade acompanhada e documentação acessível.
             </p>
-
-            <ul
-              class="service-tags"
-              aria-label="Serviços de redes e monitoramento"
-            >
-              <li>MikroTik, switches, roteadores e firewalls</li>
-              <li>Disponibilidade dos dispositivos por IP</li>
-              <li>Topologia e inventário da rede</li>
+            <ul class="service-list">
+              <li>Configuração de switches, roteadores e firewalls, incluindo equipamentos MikroTik.</li>
+              <li>Monitoramento da disponibilidade dos dispositivos por endereço IP.</li>
+              <li>Topologia e inventário da rede organizados em planilha.</li>
             </ul>
-
-            <details class="service-details">
-
-              <summary>
-                Conhecer solução
-                <span class="service-arrow" aria-hidden="true">→</span>
-              </summary>
-
-              <div class="service-detail-body">
-
-                <p>
-                  O trabalho pode envolver a configuração
-                  dos equipamentos de rede e o monitoramento
-                  de sua disponibilidade por endereço IP.
-                  Esse acompanhamento se refere à
-                  infraestrutura de rede.
-                </p>
-
-                <p>
-                  A documentação pode reunir a topologia
-                  e o inventário dos equipamentos em uma
-                  planilha. Dispositivos monitorados,
-                  frequência, notificações e atividades
-                  de atendimento precisam ser definidos
-                  para cada escopo.
-                </p>
-
-              </div>
-
-            </details>
-
+            <p class="service-card__scope">
+              Dispositivos, frequência, notificações e atividades de atendimento são definidos no escopo.
+              O monitoramento descrito é da infraestrutura de rede.
+            </p>
           </article>
 
-          <!-- ===========================
-               SERVIÇO 02 / SITES INSTITUCIONAIS
-          ============================ -->
-
           <article
-            class="service-card"
+            class="service-card service-card--web"
+            id="sites-institucionais"
             aria-labelledby="web-title"
           >
-
-            <div class="service-top">
-
-              <span class="service-icon" aria-hidden="true">
-
-                <svg
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="4" y="8" width="48" height="36" rx="4"/>
-                  <path d="M4 18h48M11 13h1m5 0h1m5 0h1M23 25l-6 5 6 5m12-10 6 5-6 5m-4-12-4 14M22 44v10m-8 0h26"/>
-                  <rect x="44" y="30" width="16" height="28" rx="3"/>
-                  <path d="M50 52h4"/>
-                </svg>
-
-              </span>
-
-              <span class="service-number" aria-hidden="true">
-                02 / TRANSFORMAR
-              </span>
-
+            <div class="service-card__topline">
+              <span class="service-card__number">02</span>
+              <span class="service-card__category">Para empresas</span>
             </div>
-
-            <h3 id="web-title">
-              Sites institucionais
-              <span>para empresas</span>
-            </h3>
-
-            <p class="service-description">
-              Criamos páginas para apresentar a empresa,
-              explicar seus serviços e organizar seus
-              canais de contato em uma experiência
-              adaptada a celulares e computadores.
+            <h3 id="web-title">Sites institucionais</h3>
+            <p class="service-card__summary">
+              Uma presença digital própria para apresentar a empresa, explicar seus serviços
+              e facilitar que clientes encontrem as informações importantes.
             </p>
-
-            <ul
-              class="service-tags"
-              aria-label="Características dos sites"
-            >
-              <li>Conteúdo claro e identidade própria</li>
-              <li>Adaptação para dispositivos móveis</li>
-              <li>Acessibilidade e desempenho</li>
+            <ul class="service-list">
+              <li>Conteúdo organizado e identidade visual alinhada ao negócio.</li>
+              <li>Experiência pensada primeiro para celulares.</li>
+              <li>Navegação acessível e atenção ao desempenho.</li>
             </ul>
-
-            <details class="service-details">
-
-              <summary>
-                Conhecer solução
-                <span class="service-arrow" aria-hidden="true">→</span>
-              </summary>
-
-              <div class="service-detail-body">
-
-                <p>
-                  O site organiza as informações da empresa
-                  e seus serviços em páginas institucionais
-                  adaptadas a diferentes tamanhos de tela.
-                </p>
-
-                <p>
-                  Textos, imagens, quantidade de páginas,
-                  domínio, hospedagem, manutenção e
-                  atualizações devem ser alinhados
-                  antes da proposta.
-                </p>
-
-              </div>
-
-            </details>
-
+            <p class="service-card__scope">
+              Páginas, textos, imagens, domínio, hospedagem e necessidades de manutenção
+              são alinhados antes da proposta.
+            </p>
           </article>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- ===================================
-         03 / COMO TRABALHAMOS
-    ==================================== -->
-
-    <section
-      class="section"
-      id="processo"
-      aria-labelledby="process-title"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            02 / COMO TRABALHAMOS
-          </p>
-
-          <h2 id="process-title">
-            Do primeiro contato à entrega.
-          </h2>
-
-          <p>
-            Um fluxo de trabalho organizado para que
-            você acompanhe as principais decisões
-            do projeto.
-          </p>
-
+    <section class="section process" id="processo" aria-labelledby="process-title">
+      <div class="container process-layout">
+        <div class="section-heading process-heading">
+          <p class="eyebrow eyebrow--dark">Um caminho transparente</p>
+          <h2 id="process-title">Primeiro alinhamos. <span>Depois executamos.</span></h2>
+          <p>O cliente sabe o que está sendo proposto antes do início do trabalho.</p>
         </div>
-
         <ol class="process-list">
-
           <li>
-            <span class="step-number" aria-hidden="true">01</span>
-            <h3>Entender</h3>
-            <p>
-              Ouvimos seu objetivo e conhecemos
-              o contexto do projeto.
-            </p>
+            <span class="process-list__number">01</span>
+            <div>
+              <h3>Entender a necessidade</h3>
+              <p>Conversamos sobre o contexto, o objetivo e o resultado esperado.</p>
+            </div>
           </li>
-
           <li>
-            <span class="step-number" aria-hidden="true">02</span>
-            <h3>Definir</h3>
-            <p>
-              Identificamos o serviço necessário
-              e seus requisitos.
-            </p>
+            <span class="process-list__number">02</span>
+            <div>
+              <h3>Definir o escopo</h3>
+              <p>Alinhamos atividades, entregas, responsabilidades e condições do serviço.</p>
+            </div>
           </li>
-
           <li>
-            <span class="step-number" aria-hidden="true">03</span>
-            <h3>Planejar</h3>
-            <p>
-              Apresentamos a proposta e alinhamos
-              as entregas previstas.
-            </p>
+            <span class="process-list__number">03</span>
+            <div>
+              <h3>Apresentar a proposta</h3>
+              <p>O trabalho começa após a aprovação do que foi combinado.</p>
+            </div>
           </li>
-
           <li>
-            <span class="step-number" aria-hidden="true">04</span>
-            <h3>Executar</h3>
-            <p>
-              Realizamos o trabalho aprovado
-              e informamos seu andamento.
-            </p>
+            <span class="process-list__number">04</span>
+            <div>
+              <h3>Realizar o trabalho</h3>
+              <p>A execução segue o escopo aprovado, com comunicação sobre o andamento.</p>
+            </div>
           </li>
-
         </ol>
-
       </div>
-
     </section>
 
-    <!-- ===================================
-         04 / SOBRE NÓS
-    ==================================== -->
-
-    <section
-      class="section"
-      id="sobre"
-      aria-labelledby="about-title"
-    >
-
-      <div class="container trust-grid">
-
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <p class="eyebrow">Sobre a MENDOZA</p>
         <div>
-
-          <p class="eyebrow">
-            03 / SOBRE NÓS
-          </p>
-
-          <h2 id="about-title">
-            Uma atuação que conecta
-            Chapecó e Curitiba.
-          </h2>
-
-        </div>
-
-        <div>
-
-          <p class="lead">
-            A MENDOZA nasce da colaboração entre
-            Chapecó (SC) e Curitiba (PR), com foco
-            em serviços tecnológicos para negócios.
-          </p>
-
+          <h2 id="about-title">Uma empresa nova, com experiência real em redes.</h2>
           <p>
-            Projetos de desenvolvimento web podem
-            ser conduzidos remotamente para clientes
-            em todo o Brasil.
+            A MENDOZA está iniciando sua atuação. Seu CEO traz experiência em configuração
+            de redes e equipamentos. O desenvolvimento web é uma nova frente conduzida
+            pela equipe da MENDOZA, com escopo e entregas alinhados antes de cada projeto.
           </p>
+        </div>
+      </div>
+    </section>
 
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <p class="eyebrow">Próximo passo</p>
+          <h2 id="contact-title">Vamos entender o que você precisa.</h2>
+        </div>
+        <div class="contact-note">
           <p>
-            A viabilidade de atendimentos técnicos
-            presenciais é avaliada conforme a região
-            e a natureza da demanda.
+            Fale diretamente com o CEO da MENDOZA pelo WhatsApp para apresentar
+            sua necessidade e entender os próximos passos.
           </p>
-
+          <a
+            class="button button--whatsapp"
+            href="https://wa.me/5541995474569?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MENDOZA%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar pelo WhatsApp
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
-
       </div>
-
     </section>
-
-    <!-- ===================================
-         05 / COMPROMISSOS
-    ==================================== -->
-
-    <section
-      class="section trust"
-      id="confianca"
-      aria-labelledby="trust-title"
-    >
-
-      <div class="container trust-grid">
-
-        <div>
-
-          <p class="eyebrow">
-            04 / COMPROMISSOS
-          </p>
-
-          <h2 id="trust-title">
-            O que você pode esperar da MENDOZA.
-          </h2>
-
-        </div>
-
-        <div>
-
-          <p class="lead">
-            Informações objetivas para decidir
-            com segurança antes de contratar.
-          </p>
-
-          <ul class="principles">
-
-            <li>
-              Descrição clara do serviço
-              e das entregas previstas.
-            </li>
-
-            <li>
-              Definição do que está incluído
-              na proposta.
-            </li>
-
-            <li>
-              Alinhamento sobre prazos
-              e condições de atendimento.
-            </li>
-
-            <li>
-              Comunicação durante a execução
-              do projeto.
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ===================================
-         06 / CONTATO
-    ==================================== -->
-
-    <section
-      class="section contact"
-      id="contato"
-      aria-labelledby="contact-title"
-    >
-
-      <div class="container contact-grid">
-
-        <div>
-
-          <p class="eyebrow">
-            05 / CONTATO
-          </p>
-
-          <h2 id="contact-title">
-            Conte o que sua empresa precisa.
-          </h2>
-
-          <p class="lead">
-            Para avaliar uma solicitação, precisamos
-            conhecer o serviço desejado, a cidade
-            e o objetivo do projeto.
-          </p>
-
-        </div>
-
-        <aside
-          class="contact-panel"
-          aria-label="Informações de contato comercial"
-        >
-
-          <span class="status">
-            CANAIS EM PREPARAÇÃO
-          </span>
-
-          <h3>
-            Atendimento comercial
-          </h3>
-
-          <p>
-            Os contatos oficiais da MENDOZA
-            serão disponibilizados aqui
-            após confirmação.
-          </p>
-
-          <p class="contact-note">
-            Este site ainda não recebe
-            pedidos de orçamento.
-          </p>
-
-        </aside>
-
-      </div>
-
-    </section>
-
   </main>
 
-  <!-- =====================================
-       FOOTER MENDOZA
-  ====================================== -->
-
-  <footer class="site-footer mendoza-footer">
-
-    <div class="container">
-
-      <div class="mendoza-footer__top">
-
-        <!-- MARCA -->
-
-        <div class="mendoza-footer__brand">
-
-          <a
-            class="brand footer-brand mendoza-footer__logo"
-            href="#inicio"
-            aria-label="MENDOZA — Voltar ao início"
-          >
-            <img
-              class="brand-logo"
-              src="assets/img/Logo%20tecnol%C3%B3gico%20Mendoza_%20seguridad%20y%20tecnolog%C3%ADa.png"
-              alt=""
-              width="2172"
-              height="724"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-
-          <p>
-            Presença digital e suporte
-            à infraestrutura de TI.
-          </p>
-
-          <!-- REDES SOCIAIS -->
-
-          <!--
-            Ícones visuais.
-            Adicionar links apenas quando
-            os perfis oficiais forem confirmados.
-          -->
-
-          <div
-            class="mendoza-footer__social"
-            aria-label="Redes sociais em preparação"
-          >
-
-            <!-- FACEBOOK -->
-
-            <span
-              class="mendoza-footer__social-icon"
-              role="img"
-              aria-label="Facebook — perfil em preparação"
-            >
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"
-                />
-              </svg>
-
-            </span>
-
-            <!-- INSTAGRAM -->
-
-            <span
-              class="mendoza-footer__social-icon"
-              role="img"
-              aria-label="Instagram — perfil em preparação"
-            >
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <rect
-                  x="2.5"
-                  y="2.5"
-                  width="19"
-                  height="19"
-                  rx="5.5"
-                />
-
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4.3"
-                />
-
-                <circle
-                  cx="17.8"
-                  cy="6.5"
-                  r="1"
-                  fill="currentColor"
-                  stroke="none"
-                />
-              </svg>
-
-            </span>
-
-          </div>
-
-        </div>
-
-        <!-- LINKS RÁPIDOS -->
-
-        <nav
-          class="mendoza-footer__links"
-          aria-label="Navegação do rodapé"
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand--footer" href="#inicio" aria-label="MENDOZA — Voltar ao início">
+        <img
+          class="brand__logo"
+          src="assets/img/MENDOZA_LOGO_ORIGINAL.png"
+          alt=""
+          width="2172"
+          height="724"
         >
-
-          <h2>Links rápidos</h2>
-
-          <a href="#inicio">Início</a>
-          <a href="#solucoes">Soluções</a>
-          <a href="#processo">Como trabalhamos</a>
-          <a href="#sobre">Sobre nós</a>
-          <a href="#contato">Contato</a>
-
-        </nav>
-
-        <!-- LOCALIZAÇÃO -->
-
-        <div class="mendoza-footer__info">
-
-          <h2>Onde estamos</h2>
-
-          <p>Chapecó — SC</p>
-          <p>Curitiba — PR</p>
-
-          <p>
-            Projetos web com atendimento remoto.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- FOOTER INFERIOR -->
-
-      <div class="mendoza-footer__bottom">
-
-        <p>
-          © 2026 MENDOZA — Segurança e Tecnologia.
-          Todos os direitos reservados.
-        </p>
-
-        <a href="#inicio">
-          Voltar ao início ↑
-        </a>
-
-      </div>
-
+      </a>
+      <p>Redes para condomínios. Sites institucionais para empresas.</p>
+      <nav aria-label="Links do rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="privacidade.html">Privacidade</a>
+      </nav>
     </div>
-
+    <div class="container footer-bottom">
+      <span>MENDOZA — Segurança e Tecnologia</span>
+      <a href="#inicio">Voltar ao início ↑</a>
+    </div>
   </footer>
 
+  <a
+    class="button button--whatsapp whatsapp-float"
+    href="https://wa.me/5541995474569?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MENDOZA%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com o CEO da MENDOZA pelo WhatsApp; abre em uma nova aba"
+  >
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M20.2 11.5a8.2 8.2 0 0 1-12 7.2L4 20l1.3-4a8.2 8.2 0 1 1 14.9-4.5Z"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.8"
+      />
+      <path
+        d="M8.5 8.2c.2-.5.6-.7 1.1-.7h.5l1 2.1-1 .9c.4.9 1.1 1.6 2 2l.9-1 2.1 1v.5c0 .5-.3.9-.8 1.1"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.8"
+      />
+    </svg>
+    <span>Fale pelo WhatsApp</span>
+  </a>
 </body>
 </html>

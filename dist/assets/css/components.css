@@ -1,910 +1,343 @@
-
-/* ==========================================
-   MENDOZA — SEGURANÇA E TECNOLOGIA
-   COMPONENTS CSS | VERSÃO 2.0
-
-   Header, navegação, botões,
-   componentes e rodapé.
-
-   Compatível com:
-   - base.css
-   - home.css
-   - main.js existente
-========================================== */
-
-
-/* ==========================================
-   01. LINK DE ACESSIBILIDADE
-========================================== */
-
-.skip-link {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 9999;
-
-  padding: 0.85rem 1.2rem;
-
-  background: #FFFFFF;
-  color: #0A162B;
-
-  border-radius: var(--radius-sm);
-
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-
-  transform: translateY(-200%);
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-  color: #0A162B;
-}
-
-
-/* ==========================================
-   02. HEADER PRINCIPAL
-========================================== */
-
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-
-  width: 100%;
-
-  background: #0A162B;
-
-  border-bottom: 1px solid rgba(
-    128, 201, 255, 0.16
-  );
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 5;
+  background: var(--navy);
+  color: var(--paper);
 }
-
-/* Linha tecnológica na base do header */
-
-.site-header::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 1px;
-
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(8, 127, 231, 0.55) 50%,
-    transparent 100%
-  );
-
-  pointer-events: none;
-}
-
-
-/* ==========================================
-   03. CONTAINER DO HEADER
-========================================== */
 
 .header-inner {
   display: flex;
+  min-height: 4.5rem;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  gap: 1rem;
-
-  min-height: 86px;
-  padding-block: 0.75rem;
+  gap: 0.75rem 1rem;
+  padding-block: 0.55rem;
 }
-
-
-/* ==========================================
-   04. IDENTIDADE / LOGOTIPO
-========================================== */
 
 .brand {
   display: inline-flex;
-  align-items: center;
-
   min-width: 0;
-  max-width: calc(100% - 7rem);
-
+  align-items: center;
+  gap: 0;
+  color: var(--paper);
   text-decoration: none;
-
-  transition:
-    opacity var(--transition-fast);
 }
 
-.brand:hover {
-  opacity: 0.9;
-}
-
-.site-header .brand-logo {
+.brand__logo {
   display: block;
-
-  width: clamp(
-    160px,
-    16vw,
-    205px
-  );
-
-  max-width: 100%;
+  width: clamp(10rem, 20vw, 13rem);
   height: auto;
-
-  object-fit: contain;
 }
-
-
-/* ==========================================
-   05. NAVEGAÇÃO
-========================================== */
-
-.site-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-
-  gap: 0.35rem 1.1rem;
-
-  width: 100%;
-}
-
-.site-header nav a {
-  position: relative;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 44px;
-  padding: 0.55rem 0.3rem;
-
-  color: #D3DFED;
-
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.4;
-
-  text-decoration: none;
-
-  transition:
-    color var(--transition-fast);
-}
-
-/* Sublinhado animado */
-
-.site-header nav a::after {
-  content: "";
-
-  position: absolute;
-  left: 0.3rem;
-  right: 0.3rem;
-  bottom: 4px;
-
-  height: 2px;
-
-  background: var(--blue-light);
-
-  transform: scaleX(0);
-  transform-origin: center;
-
-  transition:
-    transform var(--transition-normal);
-}
-
-.site-header nav a:hover {
-  color: #FFFFFF;
-}
-
-.site-header nav a:hover::after,
-.site-header nav a:focus-visible::after {
-  transform: scaleX(1);
-}
-
-
-/* ==========================================
-   06. DESTAQUE DE CONTATO
-========================================== */
-
-.site-header nav .nav-contact {
-  gap: 0.4rem;
-
-  padding-inline: 1rem;
-
-  border: 1px solid rgba(
-    8, 127, 231, 0.5
-  );
-
-  border-radius: var(--radius-sm);
-
-  background: rgba(
-    8, 127, 231, 0.1
-  );
-
-  color: #A8DCFF;
-
-  font-weight: 600;
-
-  transition:
-    background var(--transition-fast),
-    border-color var(--transition-fast),
-    color var(--transition-fast);
-}
-
-.site-header nav .nav-contact::after {
-  display: none;
-}
-
-.site-header nav .nav-contact:hover {
-  background: rgba(
-    8, 127, 231, 0.2
-  );
-
-  border-color: var(--blue-light);
-  color: #FFFFFF;
-}
-
-
-/* ==========================================
-   07. BOTÃO DO MENU MOBILE
-========================================== */
 
 .menu-toggle {
   display: inline-flex;
+  min-width: 3rem;
+  min-height: 3rem;
   align-items: center;
   justify-content: center;
-
-  gap: 0.65rem;
-
-  min-height: 44px;
-  padding: 0.6rem 0.85rem;
-
-  border: 1px solid rgba(
-    128, 201, 255, 0.35
-  );
-
-  border-radius: var(--radius-sm);
-
-  background: #13243A;
-  color: #FFFFFF;
-
+  gap: 0.55rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0.65rem;
+  background: transparent;
+  color: var(--paper);
   font-size: 0.875rem;
-  font-weight: 600;
-
-  transition:
-    background var(--transition-fast),
-    border-color var(--transition-fast);
+  font-weight: 650;
+  cursor: pointer;
 }
 
-/* Ícone decorativo com três linhas */
-
-.menu-toggle::before {
-  content: "";
-
+.menu-toggle__icon {
   display: block;
-
-  width: 18px;
-  height: 14px;
-
-  flex-shrink: 0;
-
+  width: 1.125rem;
+  height: 0.875rem;
+  flex: none;
   background:
-    linear-gradient(
-      #80C9FF,
-      #80C9FF
-    ) center top / 18px 2px no-repeat,
-
-    linear-gradient(
-      #80C9FF,
-      #80C9FF
-    ) center center / 18px 2px no-repeat,
-
-    linear-gradient(
-      #80C9FF,
-      #80C9FF
-    ) center bottom / 18px 2px no-repeat;
+    linear-gradient(var(--blue-pale), var(--blue-pale)) center 0 / 100% 2px no-repeat,
+    linear-gradient(var(--blue-pale), var(--blue-pale)) center / 100% 2px no-repeat,
+    linear-gradient(var(--blue-pale), var(--blue-pale)) center 100% / 100% 2px no-repeat;
 }
 
-.menu-toggle:hover {
-  background: #193454;
-  border-color: var(--blue-light);
-}
-
-.menu-toggle[aria-expanded="true"] {
-  background: rgba(
-    8, 127, 231, 0.22
-  );
-  border-color: var(--blue-light);
-}
-
-
-/* ==========================================
-   08. BOTÕES PRINCIPAIS
-========================================== */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 0.85rem;
-
-  min-height: 50px;
-  max-width: 100%;
-
-  padding: 0.95rem 1.5rem;
-
-  border: 1px solid transparent;
-  border-radius: var(--radius-md);
-
-  background: var(--blue);
-  color: #FFFFFF;
-
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-align: center;
-  text-decoration: none;
-
-  box-shadow:
-    0 6px 18px rgba(
-      8, 127, 231, 0.18
-    );
-
-  transition:
-    background var(--transition-fast),
-    box-shadow var(--transition-normal),
-    transform var(--transition-normal);
-}
-
-.button:hover {
-  background: var(--blue-hover);
-  color: #FFFFFF;
-
-  box-shadow:
-    0 10px 24px rgba(
-      8, 127, 231, 0.24
-    );
-
-  transform: translateY(-2px);
-}
-
-.button:active {
-  transform: translateY(0);
-}
-
-.button span[aria-hidden="true"] {
-  display: inline-block;
-  flex-shrink: 0;
-
-  font-size: 1.15rem;
-
-  transition:
-    transform var(--transition-normal);
-}
-
-.button:hover span[aria-hidden="true"] {
-  transform: translate(2px, -2px);
-}
-
-
-/* ==========================================
-   09. CABEÇALHOS DE SEÇÕES
-========================================== */
-
-.section-heading {
-  margin-bottom: clamp(
-    2rem,
-    4vw,
-    3rem
-  );
-}
-
-.section-heading > p:last-child {
-  color: var(--muted);
-  line-height: 1.75;
-}
-
-
-/* ==========================================
-   10. FOOTER PRINCIPAL
-========================================== */
-
-.site-footer {
-  position: relative;
-
-  padding-block: clamp(
-    2rem,
-    4vw,
-    3.5rem
-  );
-
-  background: #081321;
-
-  border-top: 1px solid rgba(
-    128, 201, 255, 0.14
-  );
-
-  color: var(--muted);
-
-  font-size: 0.875rem;
-}
-
-.site-footer::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 1px;
-
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(8, 127, 231, 0.45),
-    transparent
-  );
-}
-
-
-.footer-brand {
-  max-width: 100%;
-}
-
-.footer-brand .brand-logo {
-  width: clamp(
-    175px,
-    22vw,
-    230px
-  );
-}
-
-
-
-
-
-
-/* ==========================================
-   11. DESKTOP
-========================================== */
-
-@media (min-width: 800px) {
-
-  .header-inner {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 1.25rem;
-  }
-
-  .site-header .brand {
-    flex-shrink: 0;
-  }
-
-  .site-header nav {
-    margin-left: auto;
-    width: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-
-    gap: clamp(
-      0.45rem,
-      1.1vw,
-      1.15rem
-    );
-  }
-
-  .site-header nav a {
-    font-size: clamp(
-      0.78rem,
-      0.95vw,
-      0.875rem
-    );
-    white-space: nowrap;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
-}
-
-
-/* ==========================================
-   12. TABLET E MOBILE
-========================================== */
-
-@media (max-width: 799px) {
-
-  .header-inner {
-    min-height: 68px;
-    padding-block: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  .site-header .brand-logo {
-    width: clamp(
-      132px,
-      38vw,
-      170px
-    );
-  }
-
-  .menu-toggle {
-    min-width: 48px;
-    min-height: 48px;
-  }
-
-  .site-header nav {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-
-    gap: 0.25rem;
-
-    width: 100%;
-    padding: 0.75rem;
-
-    background: #101F33;
-
-    border: 1px solid rgba(
-      128, 201, 255, 0.18
-    );
-
-    border-radius: var(--radius-md);
-
-    box-shadow:
-      0 12px 24px rgba(
-        0, 0, 0, 0.14
-      );
-  }
-
-  .site-header nav a {
-    justify-content: flex-start;
-
-    width: 100%;
-    min-height: 48px;
-
-    padding: 0.85rem 1rem;
-
-    border-radius: var(--radius-sm);
-
-    font-size: 0.95rem;
-  }
-
-  .site-header nav a::after {
-    display: none;
-  }
-
-  .site-header nav a:hover,
-  .site-header nav a:focus-visible {
-    background: rgba(
-      8, 127, 231, 0.13
-    );
-  }
-
-  .site-header nav .nav-contact {
-    justify-content: center;
-
-    margin-top: 0.4rem;
-    padding: 0.85rem 1rem;
-  }
-
-
-}
-
-
-/* ==========================================
-   13. TELAS PEQUENAS
-========================================== */
-
-@media (max-width: 359px) {
-
-  .site-header .brand-logo {
-    width: 128px;
-  }
-
-  .header-inner {
-    gap: 0.5rem;
-  }
-
-  .menu-toggle {
-    padding-inline: 0.65rem;
-  }
-
-  .button {
-    gap: 0.6rem;
-    padding-inline: 1rem;
-  }
-
-}
-
-
-/* ==========================================
-   14. NAVEGAÇÃO POR ÂNCORAS
-========================================== */
-
-/* Compensa a altura do header fixo */
-
-html {
-  scroll-padding-top: 6.25rem;
-}
-
-
-/* ==========================================
-   15. ACESSIBILIDADE
-========================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .brand,
-  .site-header nav a,
-  .site-header nav a::after,
-  .nav-contact,
-  .menu-toggle,
-  .button,
-  .button span[aria-hidden="true"] {
-    transition: none !important;
-  }
-
-  .button:hover,
-  .button:active {
-    transform: none;
-  }
-
-  .button:hover span[aria-hidden="true"] {
-    transform: none;
-  }
-
-}
-
-
-/* ==========================================
-   FIM — COMPONENTS CSS
-========================================== */
-
-
-
-/* ==========================================
-   MENDOZA — FOOTER CLARO
-========================================== */
-
-.site-footer.mendoza-footer {
-  position: relative;
-
-  padding: 0;
-
-  background: #F5F8FC;
-  color: #14263D;
-
-  border-top: 3px solid #087FE7;
-}
-
-/* Eliminar línea decorativa oscura anterior */
-
-.mendoza-footer::before {
-  content: none;
-}
-
-/* Distribución principal */
-
-.mendoza-footer__top {
-  display: grid;
-
-  grid-template-columns: 1.5fr 1fr 1fr;
-
-  gap: clamp(2rem, 5vw, 5rem);
-
-  padding-block: clamp(3rem, 6vw, 5rem);
-}
-
-/* Marca */
-
-.mendoza-footer__brand {
-  min-width: 0;
-}
-
-.mendoza-footer .footer-brand {
-  max-width: 100%;
-}
-
-.mendoza-footer__logo {
-  display: inline-flex;
-
-  padding: 0.75rem 1rem;
-
-  background: #0A162B;
-  border-radius: 12px;
-}
-
-.mendoza-footer__logo .brand-logo {
-  width: 210px;
-  max-width: 100%;
-  height: auto;
-}
-
-.mendoza-footer__brand p {
-  max-width: 34ch;
-
-  margin: 1.3rem 0;
-
-  color: #52637A;
-
-  font-size: 0.92rem;
-  line-height: 1.8;
-}
-
-/* Redes sociais */
-
-.mendoza-footer__social {
+.site-nav {
   display: flex;
-  flex-wrap: wrap;
-
-  gap: 0.75rem;
-
-  margin-top: 1.5rem;
-}
-
-
-.mendoza-footer__social svg {
-  width: 22px;
-  height: 22px;
-}
-
-
-/* Links e informações */
-
-.mendoza-footer__links,
-.mendoza-footer__info {
-  display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: flex-start;
-
-  gap: 0.65rem;
-
-  min-width: 0;
+  gap: 0.35rem;
+  padding-block: 0.25rem 0.75rem;
 }
 
-.mendoza-footer__links h2,
-.mendoza-footer__info h2 {
-  margin-bottom: 0.8rem;
-
-  color: #14263D;
-
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.mendoza-footer__links a {
-  min-height: 28px;
-
-  color: #52637A;
-
-  font-size: 0.9rem;
+.site-nav a,
+.site-footer nav a,
+.footer-bottom a {
+  min-height: 2.75rem;
+  align-content: center;
+  color: inherit;
+  font-size: 0.92rem;
   text-decoration: none;
-
-  transition: color 200ms ease;
 }
 
-.mendoza-footer__links a:hover {
-  color: #087FE7;
-}
-
-.mendoza-footer__info p {
-  margin: 0;
-
-  color: #52637A;
-
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-/* Barra inferior */
-
-.mendoza-footer__bottom {
+.site-nav a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-
-  gap: 1rem;
-
-  padding-block: 1.5rem;
-
-  border-top: 1px solid #D5E1ED;
+  gap: 0.65rem;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
-.mendoza-footer__bottom p {
-  margin: 0;
+.site-nav a::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.25rem;
+  left: 0.75rem;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--blue-bright);
+  content: "";
+  transition: transform 160ms ease;
+}
 
-  color: #52637A;
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.site-nav a.site-nav__service {
+  color: #e7f2ff;
+  font-weight: 650;
+}
+
+.site-nav__number {
+  color: #83b9f4;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.button--primary {
+  background: var(--blue);
+  color: var(--paper);
+}
+
+.button--primary:hover {
+  transform: translateY(-1px);
+  background: #0d58b7;
+}
+
+.button--whatsapp {
+  background: #25d366;
+  color: #082415;
+}
+
+.button--whatsapp:hover {
+  transform: translateY(-1px);
+  background: #3ce477;
+}
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 10;
+  right: clamp(1rem, 3vw, 1.5rem);
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  min-height: 3.5rem;
+  gap: 0.65rem;
+  padding-inline: 1.1rem;
+  border-radius: 999px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.24);
+  color: #082415;
+  font-size: 0.9rem;
+}
+
+.whatsapp-float svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: none;
+}
+
+.text-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: #d8e6f5;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration-color: rgba(216, 230, 245, 0.55);
+  text-underline-offset: 0.3em;
+}
+
+.text-link:hover {
+  color: var(--paper);
+}
+
+.privacy-notice {
+  border-bottom: 1px solid var(--line);
+  background: #eaf3ff;
+  color: var(--ink);
+}
+
+.privacy-notice__content {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1rem;
+}
+
+.privacy-notice__content > div {
+  flex: 1 1 20rem;
+}
+
+.privacy-notice h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.privacy-notice p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.privacy-notice__close {
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+
+.site-footer {
+  background: var(--navy-deep);
+  color: var(--paper);
+}
+
+.footer-main {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2.5rem;
+}
+
+.brand--footer {
+  width: fit-content;
+}
+
+.footer-main > p {
+  max-width: 30rem;
+  margin: 0;
+  color: var(--white-muted);
+  font-size: 0.92rem;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.site-footer nav a {
+  color: var(--white-muted);
+}
+
+.site-footer nav a:hover,
+.footer-bottom a:hover {
+  color: var(--paper);
+}
+
+.footer-bottom {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--white-muted);
   font-size: 0.8rem;
 }
 
-.mendoza-footer__bottom a {
-  color: #087FE7;
-
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
+.footer-bottom a {
+  color: var(--white-muted);
 }
 
-.mendoza-footer__bottom a:hover {
-  color: #075EA9;
-}
-
-/* Acessibilidade */
-
-.mendoza-footer a:focus-visible {
-  outline: 3px solid #087FE7;
-  outline-offset: 4px;
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
-  .mendoza-footer__top {
-    grid-template-columns: 1fr 1fr;
+@media (min-width: 960px) {
+  .header-inner {
+    min-height: 5rem;
+    flex-wrap: nowrap;
+    padding-block: 0;
   }
 
-  .mendoza-footer__brand {
-    grid-column: 1 / -1;
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.5rem, 1.5vw, 1.25rem);
+    padding: 0;
+  }
+
+  .site-nav a {
+    min-height: 2.75rem;
+    padding-inline: 0.55rem;
+    white-space: nowrap;
+  }
+
+  .site-nav a::after {
+    right: 0.55rem;
+    left: 0.55rem;
+  }
+
+  .site-nav__service {
+    gap: 0.35rem;
+  }
+
+}
+
+@media (min-width: 760px) {
+  .footer-main {
+    grid-template-columns: minmax(12rem, 0.8fr) 1fr;
+    align-items: center;
+    padding-block: 3.5rem;
+  }
+
+  .site-footer nav {
+    grid-column: 2;
+  }
+
+  .footer-bottom {
+    min-height: 4.5rem;
   }
 }
 
-/* Mobile */
-
-@media (max-width: 599px) {
-  .mendoza-footer__top {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+@media (min-width: 1000px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr auto;
   }
 
-  .mendoza-footer__brand {
+  .site-footer nav {
     grid-column: auto;
   }
-
-  .mendoza-footer__bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* Movimento reduzido */
-
-@media (prefers-reduced-motion: reduce) {
-  .mendoza-footer__links a {
-    transition: none;
-  }
-
-}
-
-
-
-/* ==========================================
-   MENDOZA — REDES SOCIAIS EM PREPARAÇÃO
-========================================== */
-
-.mendoza-footer__social .mendoza-footer__social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 46px;
-  height: 46px;
-
-  background: #E5EFFB;
-  color: #087FE7;
-
-  border: 1px solid #CADDEF;
-  border-radius: 12px;
 }

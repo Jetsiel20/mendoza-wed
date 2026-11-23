@@ -1,337 +1,54 @@
-
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <meta name="theme-color" content="#0A162B">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
-
-  <title>
-    Página não encontrada | MENDOZA
-  </title>
-
+  <meta name="theme-color" content="#101E31">
+  <title>Página não encontrada | MENDOZA</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
   <style>
-    /* MENDOZA — PÁGINA 404 */
-
-    :root {
-      color-scheme: dark;
-
-      --bg: #0A162B;
-      --blue: #087FE7;
-      --text: #F1F5F9;
-      --muted: #B8C5D5;
+    .not-found {
+      display: grid;
+      min-height: 70svh;
+      place-content: center;
+      padding-block: 4rem;
     }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      min-height: 100svh;
-
-      display: flex;
-      flex-direction: column;
-
-      background:
-        radial-gradient(
-          ellipse at 75% 40%,
-          rgba(8, 127, 231, 0.12),
-          transparent 55%
-        ),
-        var(--bg);
-
-      color: var(--text);
-
-      font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #80C9FF;
-      outline-offset: 4px;
-    }
-
-    /* HEADER */
-
-    .header {
-      padding: 24px 6%;
-      border-bottom: 1px solid #263C58;
-    }
-
-    .brand {
-      display: inline-flex;
-      flex-direction: column;
-
-      text-decoration: none;
-    }
-
-    .brand-name {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-    }
-
-    .brand-subtitle {
-      color: #80C9FF;
-      font-size: 0.65rem;
-      letter-spacing: 0.16em;
-    }
-
-    /* CONTEÚDO */
-
-    .error-container {
-      flex: 1;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 70px 24px;
-      text-align: center;
-    }
-
-    .error-content {
-      width: 100%;
-      max-width: 660px;
-    }
-
-    .error-code {
-      margin: 0 0 20px;
-
-      color: #80C9FF;
-
-      font-size: clamp(
-        6rem,
-        20vw,
-        11rem
-      );
-
-      font-weight: 800;
-      line-height: 1;
-
-      letter-spacing: -0.08em;
-    }
-
-    .error-content h1 {
-      margin: 0 0 22px;
-
-      font-size: clamp(
-        1.8rem,
-        4vw,
-        2.8rem
-      );
-
-      line-height: 1.2;
-    }
-
-    .error-description {
-      max-width: 480px;
-      margin: 0 auto 36px;
-
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    /* BOTÕES */
-
-    .error-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      gap: 14px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      min-height: 50px;
-      padding: 13px 24px;
-
-      border-radius: 10px;
-
-      font-size: 0.9rem;
-      font-weight: 700;
-
-      text-decoration: none;
-
-      transition:
-        background 200ms ease,
-        border-color 200ms ease,
-        transform 200ms ease;
-    }
-
-    .button-primary {
-      background: var(--blue);
-      color: #FFFFFF;
-    }
-
-    .button-primary:hover {
-      background: #0969BD;
-      transform: translateY(-2px);
-    }
-
-    .button-secondary {
-      border: 1px solid #47749F;
-
-      background: transparent;
-      color: #D9EAFA;
-    }
-
-    .button-secondary:hover {
-      background: #162E4A;
-      border-color: #80C9FF;
-    }
-
-    /* FOOTER CLARO */
-
-    .footer {
-      padding: 24px 6%;
-
-      background: #F5F8FC;
-      color: #52637A;
-
-      text-align: center;
+    .not-found p.not-found__code {
+      margin-bottom: 0.75rem;
+      color: var(--blue);
       font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
-    .footer p {
-      margin: 0;
+    .not-found h1 {
+      max-width: 12ch;
+      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 10vw, 4rem);
     }
 
-    /* MOBILE */
-
-    @media (max-width: 480px) {
-
-      .error-container {
-        padding: 55px 20px;
-      }
-
-      .error-actions {
-        flex-direction: column;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .error-description {
-        font-size: 0.95rem;
-      }
-
+    .not-found p {
+      max-width: 34rem;
+      margin-bottom: 1.5rem;
+      color: var(--muted);
     }
 
-    /* ACESSIBILIDADE */
-
-    @media (prefers-reduced-motion: reduce) {
-      .button {
-        transition: none;
-      }
-
-      .button:hover {
-        transform: none;
-      }
+    .not-found .button {
+      width: fit-content;
     }
   </style>
-
 </head>
-
 <body>
-
-  <!-- HEADER -->
-
-  <header class="header">
-
-    <a class="brand" href="/" aria-label="MENDOZA — Início">
-
-      <span class="brand-name">
-        MENDOZA
-      </span>
-
-      <span class="brand-subtitle">
-        SEGURANÇA E TECNOLOGIA
-      </span>
-
-    </a>
-
-  </header>
-
-  <!-- ERRO 404 -->
-
-  <main class="error-container">
-
-    <div class="error-content">
-
-      <p class="error-code" aria-hidden="true">
-        404
-      </p>
-
-      <h1>
-        Ops! Esta página não foi encontrada.
-      </h1>
-
-      <p class="error-description">
-        O endereço que você tentou acessar pode
-        estar incorreto, ter sido alterado ou
-        não estar mais disponível.
-
-        Mas não se preocupe: você pode continuar
-        navegando pelas soluções da MENDOZA.
-      </p>
-
-      <div class="error-actions">
-
-        <a
-          class="button button-primary"
-          href="/"
-        >
-          Voltar ao início
-        </a>
-
-        <a
-          class="button button-secondary"
-          href="/#solucoes"
-        >
-          Conhecer nossas soluções
-        </a>
-
-      </div>
-
-    </div>
-
+  <main class="container not-found">
+    <p class="not-found__code">Erro 404</p>
+    <h1>Esta página não foi encontrada.</h1>
+    <p>O endereço pode estar incorreto ou a página pode ter mudado. Volte ao início para conhecer os serviços da MENDOZA.</p>
+    <a class="button button--primary" href="index.html">Voltar ao início <span aria-hidden="true">↗</span></a>
   </main>
-
-  <!-- FOOTER -->
-
-  <footer class="footer">
-
-    <p>
-      © 2026 MENDOZA — Segurança e Tecnologia.
-      Todos os direitos reservados.
-    </p>
-
-  </footer>
-
 </body>
 </html>
