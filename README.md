@@ -22,6 +22,7 @@ La marca debe proyectar profesionalismo desde el primer contacto mediante un men
 - Explicar la configuración de redes y equipos, incluidos MikroTik, el monitoreo de disponibilidad por IP y la documentación de topología e inventario en planilla. La oferta corresponde a infraestructura de red, no a vigilancia de cámaras ni seguridad física.
 - Usar textos públicos en portugués de Brasil, orientados a las necesidades del cliente y sin prometer servicios o condiciones no confirmados.
 - El WhatsApp oficial de contacto con el CEO fue confirmado por el usuario y está enlazado desde la portada. No inventar otros canales ni formularios.
+- La razón social y el CNPJ fueron confirmados por el usuario y aparecen en el borrador de privacidad; no publicar la dirección particular. Instagram y Facebook están enlazados en el pie.
 
 ### Forma de trabajo
 
@@ -54,7 +55,7 @@ dist/                       Archivos públicos del sitio estático
 README.md                   Instrucciones y pendientes
 ```
 
-El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.png`. El favicon `dist/assets/img/favicon-64.png` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.png`. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.png`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre y optimizar el peso del logo y la foto antes de publicar.
+El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.png`. El favicon `dist/assets/img/favicon-64.png` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.png`. Instagram y Facebook enlazan a los perfiles proporcionados por el usuario. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.png`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre y optimizar el peso del logo y la foto antes de publicar.
 
 ## Probar localmente
 
@@ -81,7 +82,7 @@ La política es un borrador y la configuración del proveedor aún debe revisars
 - Revisar el tamaño del logo en la cabecera y el pie y la legibilidad del favicon en la pestaña del navegador. Revisar en móvil el recorte de la foto y optimizar el peso del logo y la foto antes de publicar.
 - Completar las condiciones del monitoreo: frecuencia, dispositivos, notificaciones y límites de atención.
 - Confirmar alcance de sitios web: contenidos, imágenes, páginas, dominio, alojamiento y mantenimiento.
-- Confirmar la identificación del responsable de datos, tratamiento, retención, compartición, derechos y datos legales; revisar legalmente y completar el borrador de privacidad antes del lanzamiento comercial.
+- Completar en la política los fines y bases legales del tratamiento, retención, compartición, derechos y procedimiento de solicitudes; revisar legalmente el borrador antes del lanzamiento comercial. No publicar la dirección particular sin necesidad confirmada.
 - Verificar registros, cookies y tecnologías de Vercel durante las pruebas y de Cloudflare antes de la publicación definitiva. Si se incorporan cookies o tecnologías opcionales, implementar su control real antes de activarlas y actualizar la política.
 - Definir dominio y completar URL canónica y metadatos sociales.
 
