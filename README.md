@@ -55,7 +55,7 @@ dist/                       Archivos públicos del sitio estático
 README.md                   Instrucciones y pendientes
 ```
 
-El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.png`. El pie separa la navegación principal de los enlaces a Instagram y Facebook, con objetivos de toque adaptables a móvil. El favicon `dist/assets/img/favicon-64.png` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.png`. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.png`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre y optimizar el peso del logo y la foto antes de publicar.
+El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.webp`. El pie separa la navegación principal de los enlaces a Instagram y Facebook, con objetivos de toque adaptables a móvil. El favicon `dist/assets/img/favicon-64.webp` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.webp`. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.webp`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre antes de publicar.
 
 ## Probar localmente
 
@@ -79,7 +79,7 @@ La política es un borrador y la configuración del proveedor aún debe revisars
 
 ## Pendientes antes de publicar
 
-- Revisar el tamaño del logo en la cabecera y el pie y la legibilidad del favicon en la pestaña del navegador. Revisar en móvil el recorte de la foto y optimizar el peso del logo y la foto antes de publicar.
+- Revisar el tamaño del logo en la cabecera y el pie y la legibilidad del favicon en la pestaña del navegador. Revisar en móvil el recorte de la foto.
 - Completar las condiciones del monitoreo: frecuencia, dispositivos, notificaciones y límites de atención.
 - Confirmar alcance de sitios web: contenidos, imágenes, páginas, dominio, alojamiento y mantenimiento.
 - Completar y revisar legalmente el borrador de privacidad antes del lanzamiento comercial, incluidas las bases legales, la existencia de copias de seguridad y las prácticas de los proveedores. El usuario indicó que los datos recibidos para presupuestos se eliminan manualmente una semana después de recibirlos. No publicar la dirección particular sin necesidad confirmada.
