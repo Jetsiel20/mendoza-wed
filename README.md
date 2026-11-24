@@ -55,7 +55,7 @@ dist/                       Archivos públicos del sitio estático
 README.md                   Instrucciones y pendientes
 ```
 
-El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.png`. El favicon `dist/assets/img/favicon-64.png` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.png`. Instagram y Facebook enlazan a los perfiles proporcionados por el usuario. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.png`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre y optimizar el peso del logo y la foto antes de publicar.
+El logo oficial aparece en el encabezado y el pie desde `dist/assets/img/MENDOZA_LOGO_ORIGINAL.png`. El pie separa la navegación principal de los enlaces a Instagram y Facebook, con objetivos de toque adaptables a móvil. El favicon `dist/assets/img/favicon-64.png` es una versión reducida del símbolo suministrado en `dist/assets/img/favicon-mendoza.png`. La foto del CEO se muestra en `.hero-photo-slot` desde `dist/assets/img/Profissional de Segurança no Condomínio Moderno.png`, con texto alternativo y dimensiones intrínsecas. En móvil aparece debajo del texto; revisar su encuadre y optimizar el peso del logo y la foto antes de publicar.
 
 ## Probar localmente
 
