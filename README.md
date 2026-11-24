@@ -82,7 +82,7 @@ La política es un borrador y la configuración del proveedor aún debe revisars
 - Revisar el tamaño del logo en la cabecera y el pie y la legibilidad del favicon en la pestaña del navegador. Revisar en móvil el recorte de la foto y optimizar el peso del logo y la foto antes de publicar.
 - Completar las condiciones del monitoreo: frecuencia, dispositivos, notificaciones y límites de atención.
 - Confirmar alcance de sitios web: contenidos, imágenes, páginas, dominio, alojamiento y mantenimiento.
-- Completar en la política los fines y bases legales del tratamiento, retención, compartición, derechos y procedimiento de solicitudes; revisar legalmente el borrador antes del lanzamiento comercial. No publicar la dirección particular sin necesidad confirmada.
+- Completar y revisar legalmente el borrador de privacidad antes del lanzamiento comercial, incluidas las bases legales, la existencia de copias de seguridad y las prácticas de los proveedores. El usuario indicó que los datos recibidos para presupuestos se eliminan manualmente una semana después de recibirlos. No publicar la dirección particular sin necesidad confirmada.
 - Verificar registros, cookies y tecnologías de Vercel durante las pruebas y de Cloudflare antes de la publicación definitiva. Si se incorporan cookies o tecnologías opcionales, implementar su control real antes de activarlas y actualizar la política.
 - Definir dominio y completar URL canónica y metadatos sociales.
 
