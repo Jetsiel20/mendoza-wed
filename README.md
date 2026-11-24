@@ -73,7 +73,7 @@ Revisar a 320, 360, 390, 768 y 1280 píxeles: navegación, ausencia de desbordam
 
 El sitio publicado debe tomar como raíz el contenido de `dist/`; no necesita comando de compilación. Si Vercel se conecta a un repositorio cuya raíz contiene `dist/`, configurar la salida estática como `dist`. Comprobar en la configuración efectiva del proyecto que no haya un directorio raíz o comando heredado que cambie esa ruta.
 
-Después del despliegue de prueba, verificar la portada, sus imágenes y scripts, la página de privacidad, el aviso, el menú y los enlaces de WhatsApp. Comprobar también la respuesta para una URL inexistente: servir `404.html` con estado 404 depende de la configuración de la plataforma, no del servidor local de prueba.
+Después del despliegue de prueba, verificar la portada, sus imágenes y scripts, la página de privacidad, el aviso, el menú y los enlaces de WhatsApp. Comprobar también una URL inexistente anidada: servir `404.html` con estado 404 depende de la configuración de la plataforma, no del servidor local de prueba. Sus enlaces parten de la raíz del sitio, por lo que deben probarse mediante HTTP y no abriendo el archivo directamente.
 
 La política es un borrador y la configuración del proveedor aún debe revisarse; este despliegue no equivale a una publicación comercial definitiva. Cloudflare será el destino previsto para el lanzamiento y requiere una validación independiente.
 
@@ -90,4 +90,4 @@ La política es un borrador y la configuración del proveedor aún debe revisars
 
 La portada contiene la foto del CEO en el hero, el logo oficial, dos líneas de servicio, proceso de trabajo y contacto directo por WhatsApp. La navegación principal lleva directamente a cada público; el menú móvil se controla con JavaScript vanilla por debajo de 960 px y, sin JavaScript, los enlaces permanecen visibles. El botón de WhatsApp abre un enlace externo, sin scripts de terceros. El código actual no incluye formulario ni cookies de analítica o publicidad. La página de privacidad es un borrador para pruebas; el aviso inicial es informativo, no registra consentimiento y reaparece al recargar la portada. Sin JavaScript el aviso no aparece, pero el enlace al borrador sigue en el pie.
 
-Sitio estático sin comando de build; los archivos públicos están en `dist` y los recursos usan rutas relativas. La publicación y el directorio raíz de Vercel deben verificarse antes de cada despliegue.
+Sitio estático sin comando de build; los archivos públicos están en `dist`. Los recursos usan rutas relativas salvo en `404.html`, que usa rutas desde la raíz para funcionar en direcciones anidadas. La publicación y el directorio raíz de Vercel deben verificarse antes de cada despliegue.
